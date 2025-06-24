@@ -404,6 +404,28 @@ class LazyLoader {
   }
 }
 
+// Mobile menu toggle function
+function toggleMobileMenu() {
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuBtn = document.querySelector('.mobile-menu-btn');
+  
+  if (mobileMenu && menuBtn) {
+    mobileMenu.classList.toggle('active');
+    menuBtn.classList.toggle('active');
+  }
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuBtn = document.querySelector('.mobile-menu-btn');
+  
+  if (mobileMenu && menuBtn && !mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+    mobileMenu.classList.remove('active');
+    menuBtn.classList.remove('active');
+  }
+});
+
 // Global instances
 const api = new API();
 const notifications = new NotificationManager();
@@ -493,3 +515,6 @@ window.AppUtils = {
   api,
   notifications
 };
+
+// Make toggleMobileMenu globally available
+window.toggleMobileMenu = toggleMobileMenu;

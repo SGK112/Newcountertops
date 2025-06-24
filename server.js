@@ -13,6 +13,9 @@ require('dotenv').config();
 
 const app = express();
 
+// Trust proxy for hosted environments
+app.set('trust proxy', 1);
+
 // Security and Performance Middleware
 app.use(helmet({
     contentSecurityPolicy: {
@@ -58,15 +61,11 @@ if (process.env.NODE_ENV !== 'test') {
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
-// Session Configuration
+// Session Configuration - Using memory store for development
 app.use(session({
     secret: process.env.SESSION_SECRET || 'fallback-secret-key',
     resave: false,
     saveUninitialized: false,
-    store: MongoStore.create({
-        mongoUrl: process.env.MONGODB_URI,
-        ttl: 24 * 60 * 60 // 24 hours
-    }),
     cookie: {
         secure: process.env.NODE_ENV === 'production',
         maxAge: 24 * 60 * 60 * 1000, // 24 hours
@@ -84,16 +83,20 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(expressLayouts);
 app.set('layout', 'layout');
 
-// Database Connection
+// Database Connection - Disabled for now
+console.log('📝 Running without database for development');
+/*
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/newcountertops')
 .then(() => {
     console.log('✅ Connected to MongoDB successfully');
     console.log(`📊 Database: ${mongoose.connection.name}`);
 })
 .catch((error) => {
-    console.error('❌ MongoDB connection error:', error);
-    process.exit(1);
+    console.warn('⚠️  MongoDB connection warning:', error.message);
+    console.log('📝 Server will continue without database functionality');
+    // Don't exit the process, continue without database
 });
+*/
 
 // Import Routes
 const authRoutes = require('./routes/auth');
@@ -184,6 +187,14 @@ app.get('/thank-you', (req, res) => {
   res.render('thank-you', {
     title: 'Thank You!',
     description: 'We\'ve received your request and will connect you with qualified contractors soon.',
+    url: req.protocol + '://' + req.get('host') + req.originalUrl
+  });
+});
+
+app.get('/calculators', (req, res) => {
+  res.render('calculators', {
+    title: 'Countertop Cost Calculator',
+    description: 'Calculate the estimated cost of your countertop project based on material, size, and location.',
     url: req.protocol + '://' + req.get('host') + req.originalUrl
   });
 });

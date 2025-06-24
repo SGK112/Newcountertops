@@ -11,317 +11,110 @@
 </div>
 
 <!-- Hero Section -->
-<section class="page-hero">
+<section class="page-hero py-5 text-center">
     <div class="container">
-        <div class="hero-content">
-            <div class="hero-main">
-                <h1 class="hero-title">Countertop Design Inspiration</h1>
-                <p class="hero-subtitle">Expert tips, design trends, and project guides to help you create the perfect kitchen or bathroom.</p>
-                
-                <div class="hero-features">
-                    <div class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span>Expert design tips</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span>Latest trends</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span>Project inspiration</span>
-                    </div>
-                </div>
-                
-                <div class="hero-cta">
-                    <a href="/get-quote" class="btn btn-primary btn-xl">Start Your Project</a>
-                    <span class="cta-subtitle">Free consultation included</span>
-                </div>
-            </div>
-            
-            <div class="hero-image">
-                <img src="/images/blog-hero.svg" alt="Kitchen design inspiration" 
-                     onerror="this.style.display='none'">
-            </div>
-        </div>
+        <h1 class="display-4">Countertop Insights</h1>
+        <p class="lead">Your source for the latest trends, tips, and advice in the world of countertops.</p>
     </div>
 </section>
 
-<!-- Filter Section -->
-<section class="filter-section">
+<!-- Blog Grid -->
+<section class="blog-grid py-5">
     <div class="container">
-        <div class="filter-bar">
-            <div class="filter-group">
-                <label>Category</label>
-                <select id="categoryFilter" class="form-select">
-                    <option value="">All Categories</option>
-                    <option value="design-tips">Design Tips</option>
-                    <option value="trends">Trends</option>
-                    <option value="materials">Materials Guide</option>
-                    <option value="maintenance">Care & Maintenance</option>
-                    <option value="installation">Installation</option>
-                    <option value="inspiration">Project Inspiration</option>
-                </select>
-            </div>
-            
-            <div class="filter-group">
-                <label>Material</label>
-                <select id="materialFilter" class="form-select">
-                    <option value="">Any Material</option>
-                    <option value="granite">Granite</option>
-                    <option value="quartz">Quartz</option>
-                    <option value="marble">Marble</option>
-                    <option value="quartzite">Quartzite</option>
-                    <option value="concrete">Concrete</option>
-                </select>
-            </div>
-            
-            <div class="filter-group">
-                <label>Sort By</label>
-                <select id="sortFilter" class="form-select">
-                    <option value="publishedAt">Most Recent</option>
-                    <option value="views">Most Popular</option>
-                    <option value="title">Alphabetical</option>
-                </select>
-            </div>
-            
-            <button class="btn btn-outline filter-reset" onclick="resetBlogFilters()">Clear All</button>
-        </div>
-    </div>
-</section>
-
-<!-- Featured Articles -->
-<section class="featured-section">
-    <div class="container">
-        <h2 class="section-title">Featured Articles</h2>
-        <div class="featured-grid" id="featuredArticles">
-            <!-- Featured articles will be loaded here -->
-        </div>
-    </div>
-</section>
-
-<!-- Latest Articles -->
-<section class="blog-section">
-    <div class="container">
-        <div class="section-header">
-            <h2>Latest Articles</h2>
-            <p>Stay updated with the latest in countertop design and trends</p>
-        </div>
-        
-        <div class="results-header">
-            <div class="results-count">
-                <span id="resultsCount">Loading...</span> articles found
-            </div>
-            <div class="view-toggle">
-                <button class="view-btn active" data-view="grid">
-                    Grid View
-                </button>
-                <button class="view-btn" data-view="list">
-                    List View
-                </button>
-            </div>
+        <div class="row" id="blogGrid">
+            <!-- Blog posts will be loaded here -->
         </div>
         
         <!-- Loading State -->
-        <div class="loading-state" id="loadingState">
-            <div class="skeleton-cards">
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
+        <div id="loadingState" class="text-center py-4 d-none">
+            <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
             </div>
         </div>
         
-        <!-- Blog Grid -->
-        <div class="blog-grid" id="blogGrid">
-            <!-- Blog posts will be loaded here via JavaScript -->
-        </div>
-        
         <!-- Empty State -->
-        <div class="empty-state d-none" id="emptyState">
-            <div class="empty-icon">📝</div>
+        <div id="emptyState" class="text-center py-5 d-none">
             <h3>No articles found</h3>
-            <p>Try adjusting your filters or <a href="#" onclick="resetBlogFilters()">clear all filters</a> to see more results.</p>
+            <p>Try adjusting your search criteria.</p>
         </div>
         
-        <!-- Load More -->
-        <div class="load-more-section" id="loadMoreSection">
-            <button class="btn btn-outline btn-lg" id="loadMoreBtn">Load More Articles</button>
+        <!-- Load More Section -->
+        <div id="loadMoreSection" class="text-center mt-4">
+            <button id="loadMoreBtn" class="btn btn-outline-primary">Load More Articles</button>
         </div>
     </div>
 </section>
 
-<!-- Newsletter Signup -->
-<section class="newsletter-section">
+<!-- Subscription Section -->
+<section class="subscription-section py-5 bg-light text-center">
     <div class="container">
-        <div class="newsletter-content">
-            <h2>Stay in the Loop</h2>
-            <p>Get the latest design tips, trends, and project inspiration delivered to your inbox.</p>
-            <form class="newsletter-form" id="newsletterForm">
-                <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Enter your email address" required>
-                    <button type="submit" class="btn btn-primary">Subscribe</button>
-                </div>
-                <p class="newsletter-disclaimer">We respect your privacy. Unsubscribe at any time.</p>
-            </form>
-        </div>
-    </div>
-</section>
-
-<!-- Popular Topics -->
-<section class="topics-section">
-    <div class="container">
-        <h2 class="section-title">Popular Topics</h2>
-        <div class="topics-grid">
-            <a href="/blog?category=design-tips" class="topic-card">
-                <div class="topic-icon">💡</div>
-                <h3>Design Tips</h3>
-                <p>Expert advice for creating stunning countertop designs</p>
-                <span class="topic-count">45 articles</span>
-            </a>
-            <a href="/blog?category=materials" class="topic-card">
-                <div class="topic-icon">🏗️</div>
-                <h3>Materials Guide</h3>
-                <p>Everything you need to know about countertop materials</p>
-                <span class="topic-count">32 articles</span>
-            </a>
-            <a href="/blog?category=trends" class="topic-card">
-                <div class="topic-icon">✨</div>
-                <h3>Latest Trends</h3>
-                <p>Stay updated with the newest design trends</p>
-                <span class="topic-count">28 articles</span>
-            </a>
-            <a href="/blog?category=maintenance" class="topic-card">
-                <div class="topic-icon">🧹</div>
-                <h3>Care & Maintenance</h3>
-                <p>Keep your countertops looking their best</p>
-                <span class="topic-count">22 articles</span>
-            </a>
+        <h2>Stay Updated</h2>
+        <p class="lead">Subscribe to our newsletter to get the latest news and offers.</p>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form id="newsletterForm">
+                    <div class="input-group mb-3">
+                        <input type="email" name="email" class="form-control" placeholder="Enter your email" aria-label="Recipient's email" aria-describedby="button-addon2" required>
+                        <button class="btn btn-primary" type="submit" id="button-addon2">Subscribe</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </section>
 
 <style>
 /* Blog-specific styles with blue & yellow theme */
-.featured-section {
-    padding: 60px 0;
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+.breadcrumb-section {
+    background: var(--lighter-gray);
+    padding: 20px 0;
 }
 
-.featured-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+.breadcrumb-item a {
+    color: var(--primary-color);
 }
 
-.featured-card {
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    color: inherit;
+.breadcrumb-item.active {
+    color: var(--gray-500);
 }
 
-.featured-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-    text-decoration: none;
-    color: inherit;
-}
-
-.featured-image {
-    height: 200px;
-    background: linear-gradient(135deg, #3b82f6, #1e40af);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.page-hero {
+    background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
     color: white;
-    font-size: 48px;
-    position: relative;
-    overflow: hidden;
-}
-
-.featured-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.featured-content {
-    padding: 24px;
-}
-
-.featured-title {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 12px;
-    color: #1e293b;
-    line-height: 1.3;
-}
-
-.featured-excerpt {
-    color: #64748b;
-    margin-bottom: 16px;
-    line-height: 1.6;
-}
-
-.featured-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 14px;
-    color: #94a3b8;
-}
-
-.featured-date {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.featured-category {
-    background: linear-gradient(135deg, #fbbf24, #f59e0b);
-    color: white;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-weight: 600;
-    font-size: 12px;
-}
-
-.blog-section {
     padding: 80px 0;
+    position: relative;
+}
+
+.page-hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--overlay-dark);
+    z-index: 1;
+}
+
+.page-hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.page-hero p {
+    font-size: 18px;
+    margin-bottom: 0;
 }
 
 .blog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.blog-grid.list-view {
-    grid-template-columns: 1fr;
-}
-
-.blog-grid.list-view .blog-card {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-}
-
-.blog-grid.list-view .blog-image {
-    width: 200px;
-    height: 120px;
-    flex-shrink: 0;
+    padding: 40px 0;
 }
 
 .blog-card {
-    background: white;
+    background: var(--card-background);
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px var(--shadow-light);
     overflow: hidden;
     transition: all 0.3s ease;
     text-decoration: none;
@@ -330,14 +123,14 @@
 
 .blog-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 25px var(--shadow-medium);
     text-decoration: none;
     color: inherit;
 }
 
 .blog-image {
     height: 180px;
-    background: linear-gradient(135deg, #3b82f6, #1e40af);
+    background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -360,12 +153,12 @@
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 10px;
-    color: #1e293b;
+    color: var(--gray-800);
     line-height: 1.4;
 }
 
 .blog-excerpt {
-    color: #64748b;
+    color: var(--gray-500);
     margin-bottom: 16px;
     line-height: 1.6;
     font-size: 14px;
@@ -376,7 +169,7 @@
     justify-content: space-between;
     align-items: center;
     font-size: 13px;
-    color: #94a3b8;
+    color: var(--gray-400);
 }
 
 .blog-author {
@@ -386,7 +179,7 @@
 }
 
 .blog-category {
-    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    background: linear-gradient(135deg, var(--secondary-lighter), var(--secondary-light));
     color: white;
     padding: 3px 10px;
     border-radius: 15px;
@@ -394,132 +187,59 @@
     font-size: 11px;
 }
 
-.newsletter-section {
-    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
-    color: white;
-    padding: 80px 0;
-    text-align: center;
+.subscription-section {
+    background: var(--lighter-gray);
+    padding: 60px 0;
 }
 
-.newsletter-content h2 {
-    font-size: 36px;
+.subscription-section h2 {
+    font-size: 28px;
     font-weight: 700;
     margin-bottom: 16px;
 }
 
-.newsletter-content p {
+.subscription-section p {
     font-size: 18px;
     margin-bottom: 40px;
     opacity: 0.9;
 }
 
-.newsletter-form {
-    max-width: 500px;
+.input-group {
+    max-width: 600px;
     margin: 0 auto;
 }
 
-.newsletter-form .form-group {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 16px;
-}
-
-.newsletter-form .form-control {
-    flex: 1;
+.input-group .form-control {
     padding: 16px;
     border-radius: 8px;
-    border: none;
+    border: 1px solid var(--gray-300);
     font-size: 16px;
 }
 
-.newsletter-form .btn {
+.input-group .btn {
     padding: 16px 32px;
-    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
     border: none;
     border-radius: 8px;
     font-weight: 600;
     white-space: nowrap;
 }
 
-.newsletter-disclaimer {
-    font-size: 14px;
-    opacity: 0.8;
-    margin: 0;
-}
-
-.topics-section {
-    padding: 80px 0;
-    background: #f8fafc;
-}
-
-.topics-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.topic-card {
-    background: white;
-    padding: 32px 24px;
-    border-radius: 16px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    text-decoration: none;
-    color: inherit;
-}
-
-.topic-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    text-decoration: none;
-    color: inherit;
-}
-
-.topic-icon {
-    font-size: 48px;
-    margin-bottom: 16px;
-}
-
-.topic-card h3 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 12px;
-    color: #1e293b;
-}
-
-.topic-card p {
-    color: #64748b;
-    margin-bottom: 16px;
-    line-height: 1.6;
-}
-
-.topic-count {
-    background: linear-gradient(135deg, #3b82f6, #1e40af);
-    color: white;
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 600;
-}
-
 @media (max-width: 768px) {
-    .newsletter-form .form-group {
-        flex-direction: column;
+    .page-hero h1 {
+        font-size: 36px;
     }
     
-    .newsletter-form .btn {
-        width: 100%;
+    .page-hero p {
+        font-size: 16px;
     }
     
-    .blog-grid.list-view .blog-card {
-        flex-direction: column;
+    .subscription-section h2 {
+        font-size: 24px;
     }
     
-    .blog-grid.list-view .blog-image {
-        width: 100%;
-        height: 180px;
+    .subscription-section p {
+        font-size: 16px;
     }
 }
 </style>
@@ -531,138 +251,28 @@ class BlogPage {
         this.itemsPerPage = 12;
         this.loading = false;
         this.hasMore = true;
-        this.filters = {};
         
         this.init();
-        this.loadFeaturedArticles();
         this.loadBlogPosts();
     }
     
     init() {
-        // Filter event listeners
-        document.getElementById('categoryFilter').addEventListener('change', (e) => {
-            this.filters.category = e.target.value;
-            this.resetAndLoad();
-        });
-        
-        document.getElementById('materialFilter').addEventListener('change', (e) => {
-            this.filters.tag = e.target.value;
-            this.resetAndLoad();
-        });
-        
-        document.getElementById('sortFilter').addEventListener('change', (e) => {
-            this.filters.sortBy = e.target.value;
-            this.resetAndLoad();
-        });
+        // Newsletter form
+        const newsletterForm = document.getElementById('newsletterForm');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                this.submitNewsletter(e.target);
+            });
+        }
         
         // Load more button
-        document.getElementById('loadMoreBtn').addEventListener('click', () => {
-            this.loadBlogPosts(true);
-        });
-        
-        // View toggle
-        document.querySelectorAll('.view-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
-                e.target.classList.add('active');
-                this.toggleView(e.target.dataset.view);
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener('click', () => {
+                this.loadBlogPosts(true);
             });
-        });
-        
-        // Newsletter form
-        document.getElementById('newsletterForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            this.submitNewsletter(e.target);
-        });
-    }
-    
-    async loadFeaturedArticles() {
-        try {
-            const response = await fetch('/api/blog?featured=true&limit=3');
-            const data = await response.json();
-            
-            if (data.posts && data.posts.length > 0) {
-                this.renderFeaturedArticles(data.posts);
-            } else {
-                this.renderPlaceholderFeatured();
-            }
-        } catch (error) {
-            console.error('Error loading featured articles:', error);
-            this.renderPlaceholderFeatured();
         }
-    }
-    
-    renderFeaturedArticles(posts) {
-        const container = document.getElementById('featuredArticles');
-        container.innerHTML = posts.map(post => `
-            <a href="/blog/${post.slug}" class="featured-card">
-                <div class="featured-image">
-                    ${post.featuredImage ? 
-                        `<img src="${post.featuredImage.url}" alt="${post.title}">` : 
-                        '📝'
-                    }
-                </div>
-                <div class="featured-content">
-                    <h3 class="featured-title">${post.title}</h3>
-                    <p class="featured-excerpt">${post.excerpt || post.description}</p>
-                    <div class="featured-meta">
-                        <div class="featured-date">
-                            <span>📅</span>
-                            <span>${new Date(post.publishedAt).toLocaleDateString()}</span>
-                        </div>
-                        <span class="featured-category">${post.category || 'General'}</span>
-                    </div>
-                </div>
-            </a>
-        `).join('');
-    }
-    
-    renderPlaceholderFeatured() {
-        const container = document.getElementById('featuredArticles');
-        const placeholderPosts = [
-            {
-                title: "2024 Kitchen Countertop Trends",
-                excerpt: "Discover the hottest countertop trends that are transforming modern kitchens this year.",
-                category: "Trends",
-                date: "2024-01-15"
-            },
-            {
-                title: "Quartz vs Granite: The Ultimate Guide",
-                excerpt: "Compare the pros and cons of quartz and granite to make the best choice for your project.",
-                category: "Materials",
-                date: "2024-01-10"
-            },
-            {
-                title: "Maintenance Tips for Natural Stone",
-                excerpt: "Keep your natural stone countertops looking beautiful with these expert care tips.",
-                category: "Maintenance",
-                date: "2024-01-05"
-            }
-        ];
-        
-        container.innerHTML = placeholderPosts.map(post => `
-            <a href="/blog/${post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}" class="featured-card">
-                <div class="featured-image">📝</div>
-                <div class="featured-content">
-                    <h3 class="featured-title">${post.title}</h3>
-                    <p class="featured-excerpt">${post.excerpt}</p>
-                    <div class="featured-meta">
-                        <div class="featured-date">
-                            <span>📅</span>
-                            <span>${new Date(post.date).toLocaleDateString()}</span>
-                        </div>
-                        <span class="featured-category">${post.category}</span>
-                    </div>
-                </div>
-            </a>
-        `).join('');
-    }
-    
-    resetAndLoad() {
-        this.currentPage = 1;
-        this.hasMore = true;
-        document.getElementById('blogGrid').innerHTML = '';
-        this.loadBlogPosts();
     }
     
     async loadBlogPosts(append = false) {
@@ -672,26 +282,20 @@ class BlogPage {
         this.showLoading(!append);
         
         try {
-            const params = new URLSearchParams({
-                page: this.currentPage,
-                limit: this.itemsPerPage,
-                ...this.filters
-            });
-            
-            const response = await fetch(`/api/blog?${params}`);
+            const response = await fetch(`/api/blog?page=${this.currentPage}&limit=${this.itemsPerPage}`);
             const data = await response.json();
             
             if (data.posts && data.posts.length > 0) {
                 this.renderBlogPosts(data.posts, append);
-                this.updateResultsCount(data.pagination.totalItems);
-                this.hasMore = data.pagination.hasNextPage;
+                this.hasMore = data.pagination && data.pagination.hasNextPage;
                 this.currentPage++;
-                
-                if (!this.hasMore) {
-                    document.getElementById('loadMoreSection').style.display = 'none';
-                }
             } else if (!append) {
                 this.renderPlaceholderPosts();
+            }
+            
+            if (!this.hasMore) {
+                const loadMoreSection = document.getElementById('loadMoreSection');
+                if (loadMoreSection) loadMoreSection.style.display = 'none';
             }
         } catch (error) {
             console.error('Error loading blog posts:', error);
@@ -706,6 +310,7 @@ class BlogPage {
     
     renderBlogPosts(posts, append = false) {
         const grid = document.getElementById('blogGrid');
+        if (!grid) return;
         
         if (!append) {
             grid.innerHTML = '';
@@ -716,7 +321,8 @@ class BlogPage {
             grid.appendChild(card);
         });
         
-        document.getElementById('emptyState').classList.add('d-none');
+        const emptyState = document.getElementById('emptyState');
+        if (emptyState) emptyState.classList.add('d-none');
     }
     
     renderPlaceholderPosts() {
@@ -766,45 +372,43 @@ class BlogPage {
         ];
         
         const grid = document.getElementById('blogGrid');
+        if (!grid) return;
+        
         grid.innerHTML = '';
         
         placeholderPosts.forEach(post => {
             const card = this.createBlogCard(post);
             grid.appendChild(card);
         });
-        
-        this.updateResultsCount(placeholderPosts.length);
     }
     
     createBlogCard(post) {
-        const card = document.createElement('a');
-        card.className = 'blog-card';
-        card.href = `/blog/${post.slug || post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+        const card = document.createElement('div');
+        card.className = 'col-12 col-md-6 col-lg-4 mb-4';
         
-        const imageUrl = post.featuredImage?.url || null;
+        const slug = post.slug || post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
         
         card.innerHTML = `
-            <div class="blog-image">
-                ${imageUrl ? 
-                    `<img src="${imageUrl}" alt="${post.title}" onerror="this.style.display='none'; this.parentElement.innerHTML='📝'">` : 
-                    '📝'
-                }
-            </div>
-            <div class="blog-content">
-                <h3 class="blog-title">${post.title}</h3>
-                <p class="blog-excerpt">${post.excerpt || post.description || 'Read more about this topic...'}</p>
-                <div class="blog-meta">
-                    <div class="blog-author">
-                        <span>👤</span>
-                        <span>${post.author?.name || post.author || 'NewCountertops Team'}</span>
+            <a href="/blog/${slug}" class="blog-card">
+                <div class="blog-image">
+                    📝
+                </div>
+                <div class="blog-content">
+                    <h3 class="blog-title">${post.title}</h3>
+                    <p class="blog-excerpt">${post.excerpt || post.description || 'Read more about this topic...'}</p>
+                    <div class="blog-meta">
+                        <div class="blog-author">
+                            <span>👤</span>
+                            <span>${post.author?.name || post.author || 'NewCountertops Team'}</span>
+                        </div>
+                        <span class="blog-category">${post.category || 'General'}</span>
                     </div>
-                    <span class="blog-category">${post.category || 'General'}</span>
+                    <div class="blog-meta" style="margin-top: 8px;">
+                        <small>📅 ${new Date(post.publishedAt).toLocaleDateString()}</small>
+                        <small>👁️ ${post.views || Math.floor(Math.random() * 500) + 100} views</small>
+                    </div>
                 </div>
-                <div class="blog-meta" style="margin-top: 8px;">
-                    <small>📅 ${new Date(post.publishedAt).toLocaleDateString()}</small>
-                    <small>👁️ ${post.views || Math.floor(Math.random() * 500) + 100} views</small>
-                </div>
-            </div>
+            </a>
         `;
         
         return card;
@@ -812,36 +416,37 @@ class BlogPage {
     
     showLoading(full = false) {
         if (full) {
-            document.getElementById('loadingState').classList.remove('d-none');
-            document.getElementById('blogGrid').classList.add('d-none');
+            const loadingState = document.getElementById('loadingState');
+            const blogGrid = document.getElementById('blogGrid');
+            if (loadingState) loadingState.classList.remove('d-none');
+            if (blogGrid) blogGrid.classList.add('d-none');
         }
-        document.getElementById('loadMoreBtn').textContent = 'Loading...';
-        document.getElementById('loadMoreBtn').disabled = true;
+        
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        if (loadMoreBtn) {
+            loadMoreBtn.textContent = 'Loading...';
+            loadMoreBtn.disabled = true;
+        }
     }
     
     hideLoading() {
-        document.getElementById('loadingState').classList.add('d-none');
-        document.getElementById('blogGrid').classList.remove('d-none');
-        document.getElementById('loadMoreBtn').textContent = 'Load More Articles';
-        document.getElementById('loadMoreBtn').disabled = false;
-    }
-    
-    updateResultsCount(total) {
-        document.getElementById('resultsCount').textContent = total;
-    }
-    
-    toggleView(view) {
-        const grid = document.getElementById('blogGrid');
-        if (view === 'list') {
-            grid.classList.add('list-view');
-        } else {
-            grid.classList.remove('list-view');
+        const loadingState = document.getElementById('loadingState');
+        const blogGrid = document.getElementById('blogGrid');
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        
+        if (loadingState) loadingState.classList.add('d-none');
+        if (blogGrid) blogGrid.classList.remove('d-none');
+        if (loadMoreBtn) {
+            loadMoreBtn.textContent = 'Load More Articles';
+            loadMoreBtn.disabled = false;
         }
     }
     
     async submitNewsletter(form) {
         const formData = new FormData(form);
         const email = formData.get('email');
+        
+        if (!email) return;
         
         try {
             // Here you would typically send to your newsletter API
@@ -859,17 +464,6 @@ class BlogPage {
             console.error('Newsletter signup failed:', error);
         }
     }
-}
-
-// Global functions
-function resetBlogFilters() {
-    document.getElementById('categoryFilter').value = '';
-    document.getElementById('materialFilter').value = '';
-    document.getElementById('sortFilter').value = 'publishedAt';
-    
-    const page = new BlogPage();
-    page.filters = {};
-    page.resetAndLoad();
 }
 
 // Initialize when DOM is ready

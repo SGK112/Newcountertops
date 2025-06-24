@@ -1,67 +1,11 @@
-<!-- Breadcrumb -->
-<div class="breadcrumb-section">
-    <div class="container">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Countertops</li>
-            </ol>
-        </nav>
-    </div>
-</div>
-
 <!-- Hero Section -->
-<section class="page-hero">
+<section class="hero-section">
     <div class="container">
-        <div class="hero-content">
-            <div class="hero-main">
-                <h1 class="hero-title">Discover Premium Countertops</h1>
-                <p class="hero-subtitle">Browse our curated collection of professional-grade countertops and connect with certified fabricators.</p>
-                
-                <div class="hero-features">
-                    <div class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span>Premium quality materials</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span>Certified fabricators</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span>Professional installation</span>
-                    </div>
-                </div>
-                
-                <div class="hero-cta">
-                    <a href="/get-quote" class="btn btn-primary btn-xl">Get Professional Quote</a>
-                    <span class="cta-subtitle">Free consultation included</span>
-                </div>
-            </div>
-            
-            <div class="hero-image">
-                <img src="/images/hero-countertops.svg" alt="Premium countertop installation" 
-                     onerror="this.style.display='none'">
-            </div>
-        </div>
-        
-        <!-- Trust bar -->
-        <div class="trust-bar">
-            <div class="trust-item">
-                <span class="trust-number">500K+</span>
-                <span class="trust-label">Projects completed</span>
-            </div>
-            <div class="trust-item">
-                <span class="trust-number">25K+</span>
-                <span class="trust-label">Certified professionals</span>
-            </div>
-            <div class="trust-item">
-                <span class="trust-number">4.9★</span>
-                <span class="trust-label">Customer rating</span>
-            </div>
-            <div class="trust-item">
-                <span class="trust-number">15+</span>
-                <span class="trust-label">Years experience</span>
+        <div class="row justify-content-center text-center">
+            <div class="col-12 col-lg-8">
+                <h1 class="hero-title">Premium Countertops</h1>
+                <p class="hero-subtitle">Browse our curated collection of high-quality countertops from trusted manufacturers</p>
+                <a href="/get-quote" class="btn btn-secondary btn-xl">Get Free Quote</a>
             </div>
         </div>
     </div>
@@ -70,155 +14,95 @@
 <!-- Filter Section -->
 <section class="filter-section">
     <div class="container">
-        <div class="filter-bar">
-            <div class="filter-group">
-                <label>Material</label>
-                <select id="materialFilter" class="form-select">
-                    <option value="">All Materials</option>
-                    <option value="granite">Granite</option>
-                    <option value="quartz">Quartz</option>
-                    <option value="marble">Marble</option>
-                    <option value="quartzite">Quartzite</option>
-                    <option value="concrete">Concrete</option>
-                </select>
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h2 class="section-title">Find Your Perfect Match</h2>
             </div>
-            
-            <div class="filter-group">
-                <label>Price Range</label>
-                <select id="priceFilter" class="form-select">
-                    <option value="">Any Price</option>
-                    <option value="0-50">$0 - $50/sq ft</option>
-                    <option value="50-80">$50 - $80/sq ft</option>
-                    <option value="80-120">$80 - $120/sq ft</option>
-                    <option value="120+">$120+/sq ft</option>
-                </select>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-4">
+                <div class="filter-card">
+                    <label>Material Type</label>
+                    <select class="form-control">
+                        <option>All Materials</option>
+                        <option>Granite</option>
+                        <option>Quartz</option>
+                        <option>Marble</option>
+                        <option>Quartzite</option>
+                    </select>
+                </div>
             </div>
-            
-            <div class="filter-group">
-                <label>Color</label>
-                <select id="colorFilter" class="form-select">
-                    <option value="">Any Color</option>
-                    <option value="white">White</option>
-                    <option value="black">Black</option>
-                    <option value="gray">Gray</option>
-                    <option value="brown">Brown</option>
-                    <option value="gold">Gold</option>
-                </select>
+            <div class="col-12 col-md-4">
+                <div class="filter-card">
+                    <label>Color Family</label>
+                    <select class="form-control">
+                        <option>All Colors</option>
+                        <option>White</option>
+                        <option>Gray</option>
+                        <option>Black</option>
+                        <option>Brown</option>
+                    </select>
+                </div>
             </div>
-            
-            <div class="filter-group">
-                <label>Sort By</label>
-                <select id="sortFilter" class="form-select">
-                    <option value="featured">Featured</option>
-                    <option value="price-low">Price: Low to High</option>
-                    <option value="price-high">Price: High to Low</option>
-                    <option value="popularity">Most Popular</option>
-                    <option value="newest">Newest</option>
-                </select>
+            <div class="col-12 col-md-4">
+                <div class="filter-card">
+                    <label>Price Range</label>
+                    <select class="form-control">
+                        <option>All Prices</option>
+                        <option>$40-60/sq ft</option>
+                        <option>$60-80/sq ft</option>
+                        <option>$80-120/sq ft</option>
+                        <option>$120+/sq ft</option>
+                    </select>
+                </div>
             </div>
-            
-            <button class="btn btn-outline filter-reset" onclick="resetFilters()">Clear All</button>
         </div>
     </div>
 </section>
 
-<!-- Popular Countertops Section -->
-<section class="popular-section">
+<!-- Products Grid -->
+<section class="products-section">
     <div class="container">
-        <h2 class="section-title">Popular countertop services</h2>
-        <div class="popular-grid">
-            <a href="/get-quote?material=granite" class="popular-card">
-                <div class="popular-image">
-                    <img src="/images/granite-sample.svg" alt="Granite countertops" onerror="this.style.display='none'">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/images/placeholder-countertop.jpg" alt="Countertop Sample">
+                    </div>
+                    <div class="product-content">
+                        <h3>Premium Granite</h3>
+                        <p class="product-price">$65/sq ft</p>
+                        <p>Beautiful natural stone with unique patterns</p>
+                        <a href="/get-quote" class="btn btn-primary">Get Quote</a>
+                    </div>
                 </div>
-                <div class="popular-content">
-                    <h3>Granite Installation</h3>
-                    <div class="rating">4.7 ★ (125k+)</div>
-                    <div class="price">from $65/sq ft</div>
-                </div>
-            </a>
-            <a href="/get-quote?material=quartz" class="popular-card">
-                <div class="popular-image">
-                    <img src="/images/quartz-sample.svg" alt="Quartz countertops" onerror="this.style.display='none'">
-                </div>
-                <div class="popular-content">
-                    <h3>Quartz Installation</h3>
-                    <div class="rating">4.8 ★ (98k+)</div>
-                    <div class="price">from $75/sq ft</div>
-                </div>
-            </a>
-            <a href="/get-quote?material=marble" class="popular-card">
-                <div class="popular-image">
-                    <img src="/images/marble-sample.svg" alt="Marble countertops" onerror="this.style.display='none'">
-                </div>
-                <div class="popular-content">
-                    <h3>Marble Installation</h3>
-                    <div class="rating">4.6 ★ (67k+)</div>
-                    <div class="price">from $85/sq ft</div>
-                </div>
-            </a>
-            <a href="/get-quote?material=quartzite" class="popular-card">
-                <div class="popular-image">
-                    <img src="/images/quartzite-sample.svg" alt="Quartzite countertops" onerror="this.style.display='none'">
-                </div>
-                <div class="popular-content">
-                    <h3>Quartzite Installation</h3>
-                    <div class="rating">4.7 ★ (43k+)</div>
-                    <div class="price">from $90/sq ft</div>
-                </div>
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- Browse All Section -->
-<section class="browse-section">
-    <div class="container">
-        <div class="section-header">
-            <h2>Browse all countertops</h2>
-            <p>Explore thousands of options from verified fabricators</p>
-        </div>
-        <div class="results-header">
-            <div class="results-count">
-                <span id="resultsCount">Loading...</span> countertops found
             </div>
-            <div class="view-toggle">
-                <button class="view-btn active" data-view="grid">
-                    Grid View
-                </button>
-                <button class="view-btn" data-view="list">
-                    List View
-                </button>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/images/placeholder-countertop.jpg" alt="Countertop Sample">
+                    </div>
+                    <div class="product-content">
+                        <h3>Engineered Quartz</h3>
+                        <p class="product-price">$75/sq ft</p>
+                        <p>Low maintenance and highly durable surface</p>
+                        <a href="/get-quote" class="btn btn-primary">Get Quote</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        
-        <!-- Loading State -->
-        <div class="loading-state" id="loadingState">
-            <div class="skeleton-cards">
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/images/placeholder-countertop.jpg" alt="Countertop Sample">
+                    </div>
+                    <div class="product-content">
+                        <h3>Luxury Marble</h3>
+                        <p class="product-price">$95/sq ft</p>
+                        <p>Timeless elegance for premium kitchens</p>
+                        <a href="/get-quote" class="btn btn-primary">Get Quote</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        
-        <!-- Countertops Grid -->
-        <div class="countertops-grid" id="countertopsGrid">
-            <!-- Countertops will be loaded here via JavaScript -->
-        </div>
-        
-        <!-- Empty State -->
-        <div class="empty-state d-none" id="emptyState">
-            <div class="empty-icon">🔍</div>
-            <h3>No countertops found</h3>
-            <p>Try adjusting your filters or <a href="#" onclick="resetFilters()">clear all filters</a> to see more results.</p>
-        </div>
-        
-        <!-- Load More -->
-        <div class="load-more-section" id="loadMoreSection">
-            <button class="btn btn-outline btn-lg" id="loadMoreBtn">Load More Countertops</button>
         </div>
     </div>
 </section>
@@ -226,71 +110,11 @@
 <!-- CTA Section -->
 <section class="cta-section">
     <div class="container">
-        <div class="cta-content">
-            <h2>Ready to start your countertop project?</h2>
-            <p>Get matched with top-rated fabricators in your area. Free quotes, no obligations.</p>
-            <a href="/get-quote" class="btn btn-white btn-lg">Get Free Quotes Now</a>
-            <div class="cta-features">
-                <span>✓ Compare multiple quotes</span>
-                <span>✓ Licensed & insured pros</span>
-                <span>✓ 100% satisfaction guarantee</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- How It Works Section -->
-<section class="how-it-works-section">
-    <div class="container">
-        <h2 class="section-title">How NewCountertops works</h2>
-        <div class="steps-grid">
-            <div class="step-item">
-                <div class="step-number">1</div>
-                <h3>Tell us about your project</h3>
-                <p>Answer a few quick questions about your countertop needs and preferences.</p>
-            </div>
-            <div class="step-item">
-                <div class="step-number">2</div>
-                <h3>Get matched with pros</h3>
-                <p>We'll connect you with up to 3 verified fabricators in your area.</p>
-            </div>
-            <div class="step-item">
-                <div class="step-number">3</div>
-                <h3>Compare and hire</h3>
-                <p>Review quotes, ratings, and portfolios to choose the best pro for your project.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Testimonials Section -->
-<section class="testimonials-section">
-    <div class="container">
-        <h2 class="section-title">What our customers are saying</h2>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="testimonial-rating">★★★★★</div>
-                <p>"Amazing experience! Got 3 quotes within 24 hours and found the perfect fabricator for our granite countertops."</p>
-                <div class="testimonial-author">
-                    <strong>Sarah M.</strong>
-                    <span>Austin, TX</span>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-rating">★★★★★</div>
-                <p>"The quality of pros on NewCountertops is excellent. Our quartz installation was flawless and on budget."</p>
-                <div class="testimonial-author">
-                    <strong>Mike D.</strong>
-                    <span>Denver, CO</span>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-rating">★★★★★</div>
-                <p>"Saved us thousands by comparing quotes. The fabricator we chose did an incredible job on our marble island."</p>
-                <div class="testimonial-author">
-                    <strong>Jennifer L.</strong>
-                    <span>Seattle, WA</span>
-                </div>
+        <div class="row justify-content-center text-center">
+            <div class="col-12 col-lg-8">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Get personalized quotes from certified professionals in your area</p>
+                <a href="/get-quote" class="btn btn-secondary btn-xl">Get Free Quotes Now</a>
             </div>
         </div>
     </div>
@@ -299,8 +123,8 @@
 <style>
 /* Professional Blue & Yellow theme for countertops page */
 .page-hero {
-    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-blue) 100%);
+    color: var(--text-light);
     padding: 3rem 0 2rem 0;
 }
 
@@ -343,7 +167,7 @@
 }
 
 .feature-icon {
-    background: rgba(245, 158, 11, 0.9);
+    background: var(--accent-yellow);
     border-radius: 50%;
     width: 24px;
     height: 24px;
@@ -352,7 +176,7 @@
     justify-content: center;
     font-size: 14px;
     font-weight: bold;
-    color: white;
+    color: var(--text-dark);
 }
 
 .hero-cta {
@@ -379,7 +203,7 @@
     height: 200px;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 32px var(--shadow-color);
 }
 
 .hero-image img {
@@ -392,7 +216,7 @@
     display: flex;
     justify-content: space-around;
     padding: 1.5rem 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid var(--border-color);
 }
 
 .trust-item {
@@ -404,7 +228,7 @@
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 0.25rem;
-    color: #fbbf24;
+    color: var(--accent-yellow);
 }
 
 .trust-label {
@@ -414,7 +238,7 @@
 
 .popular-section {
     padding: 4rem 0;
-    background: #f8fafc;
+    background: var(--surface-color);
 }
 
 .section-title {
@@ -422,7 +246,7 @@
     font-weight: 700;
     text-align: center;
     margin-bottom: 3rem;
-    color: #1e293b;
+    color: var(--text-primary);
 }
 
 .popular-grid {
@@ -433,19 +257,19 @@
 }
 
 .popular-card {
-    background: white;
+    background: var(--card-background);
     border-radius: 12px;
     padding: 1.5rem;
     text-decoration: none;
     color: inherit;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 12px var(--shadow-light);
     transition: all 0.3s ease;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--border-light);
 }
 
 .popular-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(30, 64, 175, 0.15);
+    box-shadow: 0 8px 25px var(--shadow-primary);
     text-decoration: none;
     color: inherit;
 }
@@ -456,7 +280,7 @@
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 1rem;
-    background: #f8fafc;
+    background: var(--surface-color);
 }
 
 .popular-image img {
@@ -469,19 +293,19 @@
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: #1e293b;
+    color: var(--text-primary);
 }
 
 .rating {
     font-size: 0.9rem;
-    color: #64748b;
+    color: var(--text-secondary);
     margin-bottom: 0.5rem;
 }
 
 .price {
     font-size: 1rem;
     font-weight: 600;
-    color: #f59e0b;
+    color: var(--accent-yellow);
 }
 
 .browse-section {
@@ -497,19 +321,19 @@
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    color: #1e293b;
+    color: var(--text-primary);
 }
 
 .section-header p {
     font-size: 1.1rem;
-    color: #64748b;
+    color: var(--text-secondary);
 }
 
 .filter-section {
-    background: white;
+    background: var(--card-background);
     padding: 2rem 0;
-    border-bottom: 1px solid #e2e8f0;
-    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid var(--border-light);
+    border-top: 1px solid var(--border-light);
 }
 
 .filter-bar {
@@ -529,22 +353,24 @@
 .filter-group label {
     font-weight: 500;
     margin-bottom: 0.5rem;
-    color: #475569;
+    color: var(--text-secondary);
     font-size: 0.9rem;
 }
 
 .form-select {
-    border: 2px solid #e2e8f0;
+    border: 2px solid var(--border-light);
     border-radius: 8px;
     padding: 0.75rem;
     font-size: 0.95rem;
     transition: border-color 0.2s;
+    background: var(--input-background);
+    color: var(--text-primary);
 }
 
 .form-select:focus {
-    border-color: #1e40af;
+    border-color: var(--primary-color);
     outline: none;
-    box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+    box-shadow: 0 0 0 3px var(--primary-focus);
 }
 
 .results-header {
@@ -557,7 +383,7 @@
 
 .results-count {
     font-weight: 500;
-    color: #475569;
+    color: var(--text-secondary);
     font-size: 1.1rem;
 }
 
@@ -569,25 +395,25 @@
 }
 
 .countertop-card {
-    background: white;
+    background: var(--card-background);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 12px var(--shadow-light);
     transition: all 0.3s ease;
     cursor: pointer;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--border-light);
 }
 
 .countertop-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(30, 64, 175, 0.15);
+    box-shadow: 0 8px 25px var(--shadow-primary);
 }
 
 .countertop-image-container {
     position: relative;
     width: 100%;
     height: 220px;
-    background: #f8fafc;
+    background: var(--surface-color);
 }
 
 .countertop-image {
@@ -606,8 +432,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #f8fafc;
-    color: #64748b;
+    background: var(--surface-color);
+    color: var(--text-secondary);
 }
 
 .placeholder-icon {
@@ -627,12 +453,12 @@
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: #1e293b;
+    color: var(--text-primary);
     line-height: 1.3;
 }
 
 .countertop-material {
-    color: #64748b;
+    color: var(--text-secondary);
     font-size: 0.9rem;
     margin-bottom: 0.75rem;
     text-transform: capitalize;
@@ -641,7 +467,7 @@
 .countertop-price {
     font-size: 1.2rem;
     font-weight: 700;
-    color: #f59e0b;
+    color: var(--accent-yellow);
     margin-bottom: 1rem;
 }
 
@@ -653,8 +479,8 @@
 }
 
 .feature-tag {
-    background: #f1f5f9;
-    color: #475569;
+    background: var(--surface-color);
+    color: var(--text-secondary);
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -667,27 +493,27 @@
 }
 
 .btn-primary {
-    background: #1e40af;
-    border: 2px solid #1e40af;
-    color: white;
+    background: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    color: var(--text-light);
     font-weight: 600;
 }
 
 .btn-primary:hover {
-    background: #1e3a8a;
-    border-color: #1e3a8a;
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
 }
 
 .btn-outline {
     background: transparent;
-    border: 2px solid #e2e8f0;
-    color: #475569;
+    border: 2px solid var(--border-light);
+    color: var(--text-secondary);
     font-weight: 500;
 }
 
 .btn-outline:hover {
-    background: #f8fafc;
-    border-color: #cbd5e1;
+    background: var(--surface-color);
+    border-color: var(--border-medium);
 }
 
 .btn-sm {
@@ -697,8 +523,8 @@
 }
 
 .cta-section {
-    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-blue) 100%);
+    color: var(--text-light);
     padding: 4rem 0;
     text-align: center;
 }
@@ -735,7 +561,7 @@
 
 .how-it-works-section {
     padding: 4rem 0;
-    background: #f8fafc;
+    background: var(--surface-color);
 }
 
 .steps-grid {
@@ -754,8 +580,8 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: #f59e0b;
-    color: white;
+    background: var(--accent-yellow);
+    color: var(--text-dark);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -768,17 +594,17 @@
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: #1e293b;
+    color: var(--text-primary);
 }
 
 .step-item p {
-    color: #64748b;
+    color: var(--text-secondary);
     line-height: 1.6;
 }
 
 .testimonials-section {
     padding: 4rem 0;
-    background: white;
+    background: var(--card-background);
 }
 
 .testimonials-grid {
@@ -789,14 +615,14 @@
 }
 
 .testimonial-card {
-    background: #f8fafc;
+    background: var(--surface-color);
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px var(--shadow-light);
 }
 
 .testimonial-rating {
-    color: #f59e0b;
+    color: var(--accent-yellow);
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
@@ -804,7 +630,7 @@
 .testimonial-card p {
     font-size: 1rem;
     line-height: 1.6;
-    color: #475569;
+    color: var(--text-secondary);
     margin-bottom: 1.5rem;
     font-style: italic;
 }
@@ -816,25 +642,70 @@
 }
 
 .testimonial-author strong {
-    color: #1e293b;
+    color: var(--text-primary);
     font-weight: 600;
 }
 
 .testimonial-author span {
-    color: #64748b;
+    color: var(--text-secondary);
     font-size: 0.9rem;
 }
 
 .btn-white {
-    background: white;
-    color: #1e40af;
-    border: 2px solid white;
+    background: var(--card-background);
+    color: var(--primary-color);
+    border: 2px solid var(--card-background);
     font-weight: 600;
 }
 
 .btn-white:hover {
-    background: #f8fafc;
-    color: #1e3a8a;
+    background: var(--surface-color);
+    color: var(--primary-hover);
+}
+
+/* Loading and empty states */
+.skeleton-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.skeleton-card {
+    height: 400px;
+    background: linear-gradient(90deg, var(--surface-color) 25%, var(--border-light) 50%, var(--surface-color) 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 2s infinite;
+    border-radius: 12px;
+}
+
+@keyframes skeleton-loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--text-secondary);
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.load-more-section {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.d-none {
+    display: none !important;
 }
 
 /* Responsive */
@@ -923,51 +794,6 @@
     .cta-section h2 {
         font-size: 1.75rem;
     }
-}
-
-/* Loading and empty states */
-.skeleton-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 1.5rem;
-}
-
-.skeleton-card {
-    height: 400px;
-    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-    background-size: 200% 100%;
-    animation: skeleton-loading 2s infinite;
-    border-radius: 12px;
-}
-
-@keyframes skeleton-loading {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
-}
-
-.empty-state {
-    text-align: center;
-    padding: 4rem 2rem;
-    color: #64748b;
-}
-
-.empty-icon {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-}
-
-.empty-state h3 {
-    color: #475569;
-    margin-bottom: 1rem;
-}
-
-.load-more-section {
-    text-align: center;
-    padding: 2rem 0;
-}
-
-.d-none {
-    display: none !important;
 }
 </style>
 

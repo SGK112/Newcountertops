@@ -1,246 +1,691 @@
-<!-- Lead Generation Form Page -->
-<div class="quote-form-page py-5">
+<!-- Smart Lead Generation Form -->
+<div class="smart-quote-form-page">
     <div class="container">
-        <div class="row justify-center">
-            <div class="col-8">
-                <div class="quote-form-header text-center mb-5">
-                    <h1>Get Free Countertop Quotes</h1>
-                    <p>Tell us about your project and we'll connect you with verified local contractors</p>
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+                <!-- Progress Header -->
+                <div class="form-progress-header">
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                    <div class="progress-steps">
+                        <div class="step" data-step="1">
+                            <div class="step-number">1</div>
+                            <div class="step-label">Project</div>
+                        </div>
+                        <div class="step" data-step="2">
+                            <div class="step-number">2</div>
+                            <div class="step-label">Materials</div>
+                        </div>
+                        <div class="step" data-step="3">
+                            <div class="step-number">3</div>
+                            <div class="step-label">Details</div>
+                        </div>
+                        <div class="step" data-step="4">
+                            <div class="step-number">4</div>
+                            <div class="step-label">Timeline</div>
+                        </div>
+                        <div class="step" data-step="5">
+                            <div class="step-number">5</div>
+                            <div class="step-label">Contact</div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="quote-form-card">
-                    <form id="quoteForm" class="quote-form">
-                        <!-- Personal Information -->
-                        <div class="form-section">
-                            <h3>Contact Information</h3>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label class="form-label">First Name *</label>
-                                        <input type="text" name="firstName" class="form-control" required>
+                <!-- Form Container -->
+                <div class="smart-form-container">
+                    <form id="smartQuoteForm" class="smart-quote-form">
+                        
+                        <!-- Step 1: Project Type (Hidden when pre-filled) -->
+                        <div class="form-step" data-step="1" id="projectStep">
+                            <div class="step-content">
+                                <h2 class="step-title">What type of project are you planning?</h2>
+                                <p class="step-subtitle">Select the option that best describes your countertop project</p>
+                                
+                                <div class="selection-cards">
+                                    <div class="selection-card" data-value="kitchen">
+                                        <div class="card-icon">🍳</div>
+                                        <h3>Kitchen Countertops</h3>
+                                        <p>Main kitchen counter surfaces, islands, or peninsulas</p>
+                                        <div class="card-features">
+                                            <span>Most Popular</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="selection-card" data-value="bathroom">
+                                        <div class="card-icon">🛁</div>
+                                        <h3>Bathroom Vanity</h3>
+                                        <p>Bathroom counter tops and vanity surfaces</p>
+                                    </div>
+                                    
+                                    <div class="selection-card" data-value="island">
+                                        <div class="card-icon">🏝️</div>
+                                        <h3>Kitchen Island</h3>
+                                        <p>Standalone kitchen island or breakfast bar</p>
+                                    </div>
+                                    
+                                    <div class="selection-card" data-value="outdoor">
+                                        <div class="card-icon">🌿</div>
+                                        <h3>Outdoor Kitchen</h3>
+                                        <p>Weather-resistant outdoor cooking spaces</p>
+                                    </div>
+                                    
+                                    <div class="selection-card" data-value="commercial">
+                                        <div class="card-icon">🏢</div>
+                                        <h3>Commercial Project</h3>
+                                        <p>Restaurant, office, or retail countertop installation</p>
                                     </div>
                                 </div>
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Last Name *</label>
-                                        <input type="text" name="lastName" class="form-control" required>
-                                    </div>
-                                </div>
+                                
+                                <input type="hidden" name="projectType" id="projectType">
                             </div>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Email Address *</label>
-                                        <input type="email" name="email" class="form-control" required>
+                        </div>
+
+                        <!-- Step 2: Material Selection -->
+                        <div class="form-step" data-step="2">
+                            <div class="step-content">
+                                <h2 class="step-title">What material interests you most?</h2>
+                                <p class="step-subtitle">Choose your preferred countertop material (you can discuss other options with contractors)</p>
+                                
+                                <div class="material-cards">
+                                    <div class="material-card" data-value="granite">
+                                        <div class="material-image">
+                                            <div class="material-sample granite-sample"></div>
+                                        </div>
+                                        <h3>Granite</h3>
+                                        <p>Natural stone with unique patterns</p>
+                                        <div class="material-price">$50-80/sq ft*</div>
+                                        <div class="material-features">
+                                            <span>✓ Heat Resistant</span>
+                                            <span>✓ Durable</span>
+                                            <span>✓ Natural Beauty</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="material-card featured" data-value="quartz">
+                                        <div class="featured-badge">Most Popular</div>
+                                        <div class="material-image">
+                                            <div class="material-sample quartz-sample"></div>
+                                        </div>
+                                        <h3>Quartz</h3>
+                                        <p>Engineered stone, non-porous</p>
+                                        <div class="material-price">$60-90/sq ft*</div>
+                                        <div class="material-features">
+                                            <span>✓ Low Maintenance</span>
+                                            <span>✓ Consistent Patterns</span>
+                                            <span>✓ Stain Resistant</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="material-card" data-value="marble">
+                                        <div class="material-image">
+                                            <div class="material-sample marble-sample"></div>
+                                        </div>
+                                        <h3>Marble</h3>
+                                        <p>Luxury natural stone</p>
+                                        <div class="material-price">$70-120/sq ft*</div>
+                                        <div class="material-features">
+                                            <span>✓ Elegant Veining</span>
+                                            <span>✓ Cool Surface</span>
+                                            <span>✓ Premium Look</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="material-card" data-value="quartzite">
+                                        <div class="material-image">
+                                            <div class="material-sample quartzite-sample"></div>
+                                        </div>
+                                        <h3>Quartzite</h3>
+                                        <p>Natural stone, quartz-like durability</p>
+                                        <div class="material-price">$65-100/sq ft*</div>
+                                        <div class="material-features">
+                                            <span>✓ Very Durable</span>
+                                            <span>✓ Heat Resistant</span>
+                                            <span>✓ Natural Patterns</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="material-card" data-value="butcher-block">
+                                        <div class="material-image">
+                                            <div class="material-sample wood-sample"></div>
+                                        </div>
+                                        <h3>Butcher Block</h3>
+                                        <p>Warm, natural wood surface</p>
+                                        <div class="material-price">$30-70/sq ft</div>
+                                        <div class="material-features">
+                                            <span>✓ Warm Feel</span>
+                                            <span>✓ Renewable</span>
+                                            <span>✓ Budget Friendly</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="material-card" data-value="unsure">
+                                        <div class="material-image">
+                                            <div class="material-sample mixed-sample"></div>
+                                        </div>
+                                        <h3>Not Sure Yet</h3>
+                                        <p>Let contractors help you decide</p>
+                                        <div class="material-price">All Options</div>
+                                        <div class="material-features">
+                                            <span>✓ Expert Guidance</span>
+                                            <span>✓ Compare All</span>
+                                            <span>✓ Best Value</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Phone Number *</label>
-                                        <input type="tel" name="phone" class="form-control" required>
+                                
+                                <input type="hidden" name="materialType" id="materialType">
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Project Details -->
+                        <div class="form-step" data-step="3">
+                            <div class="step-content">
+                                <h2 class="step-title">Tell us about your project details</h2>
+                                <p class="step-subtitle">This helps us match you with the right contractors</p>
+                                
+                                <div class="detail-sections">
+                                    <!-- Size Selection -->
+                                    <div class="detail-section">
+                                        <h3>Approximate Size</h3>
+                                        <div class="size-options">
+                                            <div class="size-option" data-value="small">
+                                                <div class="size-visual">
+                                                    <div class="size-indicator small"></div>
+                                                </div>
+                                                <span>Small</span>
+                                                <small>Under 25 sq ft</small>
+                                            </div>
+                                            <div class="size-option" data-value="medium">
+                                                <div class="size-visual">
+                                                    <div class="size-indicator medium"></div>
+                                                </div>
+                                                <span>Medium</span>
+                                                <small>25-50 sq ft</small>
+                                            </div>
+                                            <div class="size-option" data-value="large">
+                                                <div class="size-visual">
+                                                    <div class="size-indicator large"></div>
+                                                </div>
+                                                <span>Large</span>
+                                                <small>50-75 sq ft</small>
+                                            </div>
+                                            <div class="size-option" data-value="xlarge">
+                                                <div class="size-visual">
+                                                    <div class="size-indicator xlarge"></div>
+                                                </div>
+                                                <span>Extra Large</span>
+                                                <small>75+ sq ft</small>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="projectSize" id="projectSize">
+                                    </div>
+                                    
+                                    <!-- Budget Range -->
+                                    <div class="detail-section">
+                                        <h3>Budget Range</h3>
+                                        <div class="budget-slider-container">
+                                            <div class="budget-labels">
+                                                <span>$2,000</span>
+                                                <span>$5,000</span>
+                                                <span>$10,000</span>
+                                                <span>$20,000</span>
+                                                <span>$50,000+</span>
+                                            </div>
+                                            <div class="budget-options">
+                                                <div class="budget-option" data-value="2000-5000">
+                                                    <span>$2,000 - $5,000</span>
+                                                    <small>Budget-friendly options</small>
+                                                </div>
+                                                <div class="budget-option" data-value="5000-10000">
+                                                    <span>$5,000 - $10,000</span>
+                                                    <small>Popular range</small>
+                                                </div>
+                                                <div class="budget-option" data-value="10000-20000">
+                                                    <span>$10,000 - $20,000</span>
+                                                    <small>Premium materials</small>
+                                                </div>
+                                                <div class="budget-option" data-value="20000-50000">
+                                                    <span>$20,000 - $50,000</span>
+                                                    <small>Luxury project</small>
+                                                </div>
+                                                <div class="budget-option" data-value="50000+">
+                                                    <span>$50,000+</span>
+                                                    <small>High-end custom</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="budget" id="budget">
+                                    </div>
+                                    
+                                    <!-- Current Status -->
+                                    <div class="detail-section">
+                                        <h3>Project Status</h3>
+                                        <div class="status-cards">
+                                            <div class="status-card" data-value="planning">
+                                                <div class="status-icon">📝</div>
+                                                <span>Just Planning</span>
+                                                <small>Exploring options</small>
+                                            </div>
+                                            <div class="status-card" data-value="quotes">
+                                                <div class="status-icon">💰</div>
+                                                <span>Ready for Quotes</span>
+                                                <small>Comparing contractors</small>
+                                            </div>
+                                            <div class="status-card" data-value="ready">
+                                                <div class="status-icon">🚀</div>
+                                                <span>Ready to Start</span>
+                                                <small>Can begin soon</small>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="projectStatus" id="projectStatus">
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Project Location -->
-                        <div class="form-section">
-                            <h3>Project Location</h3>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Street Address</label>
-                                        <input type="text" name="street" class="form-control">
+                        <!-- Step 4: Timeline -->
+                        <div class="form-step" data-step="4">
+                            <div class="step-content">
+                                <h2 class="step-title">When would you like to start?</h2>
+                                <p class="step-subtitle">Timeline helps contractors plan and provide accurate quotes</p>
+                                
+                                <div class="timeline-options">
+                                    <div class="timeline-card" data-value="asap">
+                                        <div class="timeline-icon">⚡</div>
+                                        <h3>ASAP</h3>
+                                        <p>Need to start immediately</p>
+                                        <div class="timeline-note">Rush projects may cost more</div>
+                                    </div>
+                                    
+                                    <div class="timeline-card popular" data-value="1-month">
+                                        <div class="popular-badge">Most Common</div>
+                                        <div class="timeline-icon">📅</div>
+                                        <h3>Within 1 Month</h3>
+                                        <p>Ready to begin within 30 days</p>
+                                        <div class="timeline-note">Good availability</div>
+                                    </div>
+                                    
+                                    <div class="timeline-card" data-value="2-3-months">
+                                        <div class="timeline-icon">📆</div>
+                                        <h3>2-3 Months</h3>
+                                        <p>Planning ahead</p>
+                                        <div class="timeline-note">Better material selection</div>
+                                    </div>
+                                    
+                                    <div class="timeline-card" data-value="3-6-months">
+                                        <div class="timeline-icon">🗓️</div>
+                                        <h3>3-6 Months</h3>
+                                        <p>Long-term planning</p>
+                                        <div class="timeline-note">Best prices & selection</div>
+                                    </div>
+                                    
+                                    <div class="timeline-card" data-value="flexible">
+                                        <div class="timeline-icon">⏰</div>
+                                        <h3>Flexible</h3>
+                                        <p>No specific timeline</p>
+                                        <div class="timeline-note">Exploring options</div>
                                     </div>
                                 </div>
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label class="form-label">ZIP Code *</label>
-                                        <input type="text" name="zipCode" class="form-control" required>
-                                    </div>
-                                </div>
+                                
+                                <input type="hidden" name="timeline" id="timeline">
                             </div>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label class="form-label">City *</label>
-                                        <input type="text" name="city" class="form-control" required>
+                        </div>
+
+                        <!-- Step 5: Contact Information -->
+                        <div class="form-step" data-step="5">
+                            <div class="step-content">
+                                <h2 class="step-title">Almost done! Let's connect you with contractors</h2>
+                                <p class="step-subtitle">Your information is secure and will only be shared with verified contractors</p>
+                                
+                                <div class="contact-form">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="form-label">First Name *</label>
+                                                <input type="text" name="firstName" class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="form-label">Last Name *</label>
+                                                <input type="text" name="lastName" class="form-control" required>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-6">
+                                    
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="form-label">Email Address *</label>
+                                                <input type="email" name="email" class="form-control" required>
+                                                <small class="form-text">For quote delivery and updates</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="form-label">Phone Number *</label>
+                                                <input type="tel" name="phone" class="form-control" required>
+                                                <small class="form-text">For quick contractor contact</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="form-group">
+                                                <label class="form-label">ZIP Code *</label>
+                                                <input type="text" name="zipCode" class="form-control" required>
+                                                <small class="form-text">To find contractors in your area</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="form-label">Best Time to Call</label>
+                                                <select name="bestTimeToCall" class="form-control">
+                                                    <option value="">Anytime</option>
+                                                    <option value="morning">Morning (8AM-12PM)</option>
+                                                    <option value="afternoon">Afternoon (12PM-5PM)</option>
+                                                    <option value="evening">Evening (5PM-8PM)</option>
+                                                    <option value="weekends">Weekends Only</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
                                     <div class="form-group">
-                                        <label class="form-label">State *</label>
-                                        <select name="state" class="form-control form-select" required>
-                                            <option value="">Select State</option>
-                                            <option value="AL">Alabama</option>
-                                            <option value="AK">Alaska</option>
-                                            <option value="AZ">Arizona</option>
-                                            <option value="AR">Arkansas</option>
-                                            <option value="CA">California</option>
-                                            <option value="CO">Colorado</option>
-                                            <option value="CT">Connecticut</option>
-                                            <!-- Add more states as needed -->
-                                        </select>
+                                        <label class="form-label">Additional Details (Optional)</label>
+                                        <textarea name="additionalNotes" class="form-control" rows="3" placeholder="Any specific requirements, design preferences, or questions for contractors..."></textarea>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                            <input type="checkbox" name="agreeToTerms" class="form-check-input" required>
+                                            <label class="form-check-label">
+                                                I agree to be contacted by verified contractors and accept the <a href="/terms" target="_blank">Terms of Service</a> and <a href="/privacy" target="_blank">Privacy Policy</a>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Project Details -->
-                        <div class="form-section">
-                            <h3>Project Details</h3>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Project Type *</label>
-                                        <select name="projectType" class="form-control form-select" required>
-                                            <option value="">Select Project Type</option>
-                                            <option value="kitchen-remodel">Kitchen Remodel</option>
-                                            <option value="bathroom-remodel">Bathroom Remodel</option>
-                                            <option value="new-construction">New Construction</option>
-                                            <option value="commercial">Commercial</option>
-                                            <option value="other">Other</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Project Size *</label>
-                                        <select name="projectSize" class="form-control form-select" required>
-                                            <option value="">Select Project Size</option>
-                                            <option value="small">Small (under 50 sq ft)</option>
-                                            <option value="medium">Medium (50-100 sq ft)</option>
-                                            <option value="large">Large (100-150 sq ft)</option>
-                                            <option value="very-large">Very Large (150+ sq ft)</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Estimated Budget *</label>
-                                        <select name="estimatedBudget" class="form-control form-select" required>
-                                            <option value="">Select Budget Range</option>
-                                            <option value="under-5k">Under $5,000</option>
-                                            <option value="5k-10k">$5,000 - $10,000</option>
-                                            <option value="10k-20k">$10,000 - $20,000</option>
-                                            <option value="20k-50k">$20,000 - $50,000</option>
-                                            <option value="over-50k">Over $50,000</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Timeline *</label>
-                                        <select name="timeline" class="form-control form-select" required>
-                                            <option value="">Select Timeline</option>
-                                            <option value="asap">ASAP</option>
-                                            <option value="1-month">Within 1 Month</option>
-                                            <option value="2-3-months">2-3 Months</option>
-                                            <option value="3-6-months">3-6 Months</option>
-                                            <option value="flexible">Flexible</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Material Preferences -->
-                        <div class="form-section">
-                            <h3>Material Preferences</h3>
-                            <div class="form-group">
-                                <label class="form-label">Preferred Materials (select all that apply)</label>
-                                <div class="checkbox-group">
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" name="countertopMaterials" value="granite">
-                                        <span>Granite</span>
-                                    </label>
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" name="countertopMaterials" value="quartz">
-                                        <span>Quartz</span>
-                                    </label>
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" name="countertopMaterials" value="marble">
-                                        <span>Marble</span>
-                                    </label>
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" name="countertopMaterials" value="quartzite">
-                                        <span>Quartzite</span>
-                                    </label>
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" name="countertopMaterials" value="concrete">
-                                        <span>Concrete</span>
-                                    </label>
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" name="countertopMaterials" value="other">
-                                        <span>Other</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Additional Details</label>
-                                <textarea name="additionalNotes" class="form-control" rows="4" 
-                                    placeholder="Tell us more about your project, color preferences, special requirements, etc."></textarea>
-                            </div>
-                        </div>
-
-                        <div class="form-actions">
-                            <button type="submit" class="btn btn-secondary btn-lg">Get Free Quotes</button>
-                        </div>
-
-                        <div class="form-disclaimer">
-                            <p>By submitting this form, you agree to be contacted by verified contractors in your area. 
-                            We respect your privacy and will never share your information with third parties.</p>
+                        <!-- Navigation Buttons -->
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-outline btn-lg" id="prevBtn" style="display: none;">
+                                ← Previous
+                            </button>
+                            <div class="nav-spacer"></div>
+                            <button type="button" class="btn btn-primary btn-lg" id="nextBtn">
+                                Next →
+                            </button>
+                            <button type="submit" class="btn btn-secondary btn-xl" id="submitBtn" style="display: none;">
+                                Get My Free Quotes
+                            </button>
                         </div>
                     </form>
+                </div>
+
+                <!-- Trust Indicators -->
+                <div class="trust-indicators">
+                    <div class="trust-item">
+                        <span class="trust-icon">🔒</span>
+                        <span>Secure & Private</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">✅</span>
+                        <span>Verified Contractors</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">💰</span>
+                        <span>100% Free Service</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">⚡</span>
+                        <span>Quick Response</span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+<!-- Smart Form JavaScript -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Pre-fill form if query parameters exist
-    const urlParams = new URLSearchParams(window.location.search);
-    const form = document.getElementById('quoteForm');
+    const form = document.getElementById('smartQuoteForm');
+    const steps = document.querySelectorAll('.form-step');
+    const progressSteps = document.querySelectorAll('.progress-steps .step');
+    const progressBar = document.getElementById('progressBar');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const submitBtn = document.getElementById('submitBtn');
     
-    for (const [key, value] of urlParams.entries()) {
-        const input = form.querySelector(`[name="${key}"]`);
-        if (input) {
-            input.value = value;
+    let currentStep = 1;
+    const totalSteps = 5;
+    const formData = {};
+    
+    // Check for pre-filled data from URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const preFilledProject = urlParams.get('project');
+    const preFilledZip = urlParams.get('zip');
+    
+    // If project is pre-filled, skip step 1
+    if (preFilledProject) {
+        formData.projectType = preFilledProject;
+        document.getElementById('projectType').value = preFilledProject;
+        
+        // Hide step 1 and start from step 2
+        const projectStep = document.querySelector('.form-step[data-step="1"]');
+        projectStep.style.display = 'none';
+        currentStep = 2;
+        
+        // Update progress to show step 1 as completed
+        progressSteps[0].classList.add('completed');
+        progressSteps[1].classList.add('active');
+        steps[1].classList.add('active');
+    } else {
+        // Show step 1 normally
+        progressSteps[0].classList.add('active');
+        steps[0].classList.add('active');
+    }
+    
+    // Pre-fill ZIP code if provided
+    if (preFilledZip) {
+        const zipInput = document.querySelector('input[name="zipCode"]');
+        if (zipInput) {
+            zipInput.value = preFilledZip;
         }
     }
-
-    // Initialize form handler
-    new AppUtils.FormHandler('#quoteForm', async (data) => {
-        try {
-            // Transform address data
-            data.address = {
-                street: data.street || '',
-                city: data.city,
-                state: data.state,
-                zipCode: data.zipCode
-            };
+    
+    // Initialize
+    updateProgressBar();
+    updateButtons();
+    
+    // Selection card handlers
+    document.addEventListener('click', function(e) {
+        const card = e.target.closest('.selection-card, .material-card, .size-option, .budget-option, .status-card, .timeline-card');
+        if (!card) return;
+        
+        const container = card.parentElement;
+        let input;
+        
+        // Find the associated hidden input based on the card type
+        if (card.classList.contains('budget-option')) {
+            // For budget options, the input is in the parent detail-section
+            const detailSection = card.closest('.detail-section');
+            input = detailSection.querySelector('input[type="hidden"]');
+        } else {
+            // For other options, use the original logic
+            input = container.parentElement.querySelector('input[type="hidden"]') || 
+                   container.nextElementSibling;
+        }
+        
+        if (input && input.type === 'hidden') {
+            // Remove active class from siblings
+            container.querySelectorAll('.selection-card, .material-card, .size-option, .budget-option, .status-card, .timeline-card').forEach(c => {
+                c.classList.remove('active');
+            });
             
-            // Clean up form data
-            delete data.street;
-            delete data.city;
-            delete data.state;
-            delete data.zipCode;
+            // Add active class to clicked card
+            card.classList.add('active');
             
-            // Add default values
-            data.source = 'website';
+            // Store value
+            const value = card.dataset.value;
+            input.value = value;
+            formData[input.name] = value;
             
-            const result = await api.submitLead(data);
-            
-            // Redirect to thank you page
-            window.location.href = '/thank-you?leadId=' + result.leadId;
-            
-        } catch (error) {
-            notifications.error(error.message || 'Error submitting your request. Please try again.');
+            // Auto-advance for certain steps
+            if (container.classList.contains('selection-cards') || 
+                container.classList.contains('timeline-options')) {
+                setTimeout(() => {
+                    nextStep();
+                }, 500);
+            }
         }
     });
+    
+    // Navigation buttons
+    if (nextBtn) nextBtn.addEventListener('click', nextStep);
+    if (prevBtn) prevBtn.addEventListener('click', prevStep);
+    
+    // Form submission
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Collect all form data
+        const formDataObj = new FormData(form);
+        const data = Object.fromEntries(formDataObj.entries());
+        
+        // Add stored selections
+        Object.assign(data, formData);
+        
+        console.log('Form submitted with data:', data);
+        
+        // Show loading state
+        if (submitBtn) {
+            submitBtn.innerHTML = '<span class="spinner"></span> Connecting you with contractors...';
+            submitBtn.disabled = true;
+        }
+        
+        // Simulate API call (replace with actual endpoint)
+        setTimeout(() => {
+            window.location.href = '/thank-you';
+        }, 2000);
+    });
+    
+    function nextStep() {
+        if (currentStep < totalSteps) {
+            // Validate current step
+            if (!validateStep(currentStep)) {
+                return;
+            }
+            
+            currentStep++;
+            showStep(currentStep);
+            updateProgressBar();
+            updateButtons();
+        }
+    }
+    
+    function prevStep() {
+        if (currentStep > 1) {
+            currentStep--;
+            showStep(currentStep);
+            updateProgressBar();
+            updateButtons();
+        }
+    }
+    
+    function showStep(step) {
+        steps.forEach((s, index) => {
+            s.classList.toggle('active', index + 1 === step);
+        });
+        
+        progressSteps.forEach((s, index) => {
+            s.classList.toggle('active', index + 1 === step);
+            s.classList.toggle('completed', index + 1 < step);
+        });
+    }
+    
+    function updateProgressBar() {
+        const progress = ((currentStep - 1) / (totalSteps - 1)) * 100;
+        progressBar.style.width = progress + '%';
+    }
+    
+    function updateButtons() {
+        if (prevBtn) prevBtn.style.display = currentStep === 1 ? 'none' : 'block';
+        
+        if (currentStep === totalSteps) {
+            if (nextBtn) nextBtn.style.display = 'none';
+            if (submitBtn) submitBtn.style.display = 'block';
+        } else {
+            if (nextBtn) nextBtn.style.display = 'block';
+            if (submitBtn) submitBtn.style.display = 'none';
+        }
+    }
+    
+    function validateStep(step) {
+        const currentStepElement = document.querySelector(`.form-step[data-step="${step}"]`);
+        
+        switch(step) {
+            case 1:
+                const projectType = document.getElementById('projectType').value;
+                if (!projectType) {
+                    alert('Please select a project type');
+                    return false;
+                }
+                break;
+            case 2:
+                const materialType = document.getElementById('materialType').value;
+                if (!materialType) {
+                    alert('Please select a material preference');
+                    return false;
+                }
+                break;
+            case 3:
+                const projectSize = document.getElementById('projectSize').value;
+                const budget = document.getElementById('budget').value;
+                const projectStatus = document.getElementById('projectStatus').value;
+                
+                if (!projectSize || !budget || !projectStatus) {
+                    alert('Please complete all project details');
+                    return false;
+                }
+                break;
+            case 4:
+                const timeline = document.getElementById('timeline').value;
+                if (!timeline) {
+                    alert('Please select your preferred timeline');
+                    return false;
+                }
+                break;
+            case 5:
+                const requiredFields = currentStepElement.querySelectorAll('input[required], select[required]');
+                for (let field of requiredFields) {
+                    if (!field.value.trim()) {
+                        field.focus();
+                        alert('Please fill in all required fields');
+                        return false;
+                    }
+                }
+                
+                // Validate email
+                const email = currentStepElement.querySelector('input[type="email"]');
+                if (email && !isValidEmail(email.value)) {
+                    email.focus();
+                    alert('Please enter a valid email address');
+                    return false;
+                }
+                break;
+        }
+        
+        return true;
+    }
+    
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
 });
 </script>

@@ -61,19 +61,25 @@
                 
                 <ul class="navbar-nav">
                     <li><a href="/" class="nav-link">Home</a></li>
-                    <li><a href="/countertops" class="nav-link">Countertops</a></li>
-                    <li><a href="/blog" class="nav-link">Blog</a></li>
-                    <li><a href="/contractors" class="nav-link">Find Contractors</a></li>
+                    <li><a href="/countertops" class="nav-link">Materials</a></li>
                     <li><a href="/get-quote" class="nav-link">Get Quote</a></li>
                 </ul>
                 
-                <div class="navbar-actions">
-                    <button class="btn btn-outline" onclick="openSearchModal()">Search</button>
-                    <a href="/login" class="btn btn-primary">Login</a>
-                </div>
-                
-                <button class="mobile-menu-btn d-none">☰</button>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </nav>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <ul class="mobile-nav">
+                    <li><a href="/" class="mobile-nav-link">Home</a></li>
+                    <li><a href="/countertops" class="mobile-nav-link">Materials</a></li>
+                    <li><a href="/get-quote" class="mobile-nav-link">Get Quote</a></li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -140,8 +146,13 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 NewCountertops.com. All rights reserved.</p>
-                <p>Made with ❤️ for beautiful kitchens</p>
+                <div class="container text-center">
+                    <p>&copy; 2023 NewCountertops. All Rights Reserved.</p>
+                    <p>
+                        <a href="/privacy-policy">Privacy Policy</a> |
+                        <a href="/terms-of-service">Terms of Service</a>
+                    </p>
+                </div>
             </div>
         </div>
     </footer>
@@ -191,6 +202,46 @@
             const modal = new AppUtils.Modal('#searchModal');
             modal.open();
         }
+        
+        // Mobile menu toggle function
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (mobileMenu && mobileMenuBtn) {
+                mobileMenu.classList.toggle('active');
+                mobileMenuBtn.classList.toggle('active');
+            }
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (mobileMenu && mobileMenuBtn && 
+                !mobileMenu.contains(e.target) && 
+                !mobileMenuBtn.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
+            }
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            
+            mobileLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    if (mobileMenu && mobileMenuBtn) {
+                        mobileMenu.classList.remove('active');
+                        mobileMenuBtn.classList.remove('active');
+                    }
+                });
+            });
+        });
     </script>
 
     <!-- Analytics -->
