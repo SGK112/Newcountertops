@@ -1,0 +1,16 @@
+<!-- Quartz Sample Image -->
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="quartzGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#e9ecef;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dee2e6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#quartzGrad)"/>
+  <circle cx="50" cy="50" r="3" fill="#adb5bd" opacity="0.7"/>
+  <circle cx="150" cy="100" r="2" fill="#6c757d" opacity="0.5"/>
+  <circle cx="300" cy="80" r="4" fill="#495057" opacity="0.6"/>
+  <circle cx="200" cy="200" r="2.5" fill="#343a40" opacity="0.4"/>
+  <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="24" fill="#495057" text-anchor="middle" dy=".3em" font-weight="bold">Quartz</text>
+</svg>

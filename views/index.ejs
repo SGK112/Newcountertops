@@ -1,0 +1,596 @@
+<!-- Hero Section -->
+<section class="hero bg-gradient">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="hero-title">Find Trusted Countertop Pros Near You</h1>
+                <p class="hero-subtitle">Get matched with top-rated fabricators and contractors. Compare quotes, read reviews, and hire with confidence.</p>
+                
+                <!-- Trust Badges -->
+                <div class="trust-badges">
+                    <div class="trust-badge verified">
+                        <span>✓</span> Verified Pros
+                    </div>
+                    <div class="trust-badge">
+                        <span>⭐</span> 4.8/5 Average Rating
+                    </div>
+                    <div class="trust-badge">
+                        <span>🏆</span> 10,000+ Projects
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <!-- Lead Generation Form -->
+                <div class="hero-cta-card">
+                    <h3>Get Free Quotes in Minutes</h3>
+                    <p>Tell us about your project and we'll match you with up to 4 qualified pros.</p>
+                    
+                    <form class="lead-form" id="leadForm">
+                        <div class="step-indicator">
+                            <div class="step-dot active"></div>
+                            <div class="step-dot"></div>
+                            <div class="step-dot"></div>
+                        </div>
+                        
+                        <!-- Step 1: Project Type -->
+                        <div class="form-step active" id="step1">
+                            <h4>What type of project is this?</h4>
+                            <div class="project-types">
+                                <div class="project-type" data-value="kitchen">
+                                    <span class="project-type-icon">🍳</span>
+                                    <div>Kitchen Countertops</div>
+                                </div>
+                                <div class="project-type" data-value="bathroom">
+                                    <span class="project-type-icon">🛁</span>
+                                    <div>Bathroom Vanity</div>
+                                </div>
+                                <div class="project-type" data-value="island">
+                                    <span class="project-type-icon">🏝️</span>
+                                    <div>Kitchen Island</div>
+                                </div>
+                                <div class="project-type" data-value="other">
+                                    <span class="project-type-icon">🏠</span>
+                                    <div>Other</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 2: Material -->
+                        <div class="form-step" id="step2">
+                            <h4>What material are you considering?</h4>
+                            <select name="material" class="form-control form-select" required>
+                                <option value="">Select Material</option>
+                                <option value="granite">Granite</option>
+                                <option value="quartz">Quartz</option>
+                                <option value="marble">Marble</option>
+                                <option value="quartzite">Quartzite</option>
+                                <option value="concrete">Concrete</option>
+                                <option value="other">Not sure / Other</option>
+                            </select>
+                            
+                            <div class="form-group mt-3">
+                                <label>Approximate square footage</label>
+                                <select name="squareFootage" class="form-control form-select">
+                                    <option value="">Select range</option>
+                                    <option value="0-25">Under 25 sq ft</option>
+                                    <option value="25-50">25-50 sq ft</option>
+                                    <option value="50-75">50-75 sq ft</option>
+                                    <option value="75-100">75-100 sq ft</option>
+                                    <option value="100+">Over 100 sq ft</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 3: Contact Info -->
+                        <div class="form-step" id="step3">
+                            <h4>Get your free quotes</h4>
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="phone" class="form-control" placeholder="Phone Number" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="zipCode" class="form-control" placeholder="ZIP Code" required>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-secondary btn-lg w-100">
+                                Get My Free Quotes
+                            </button>
+                            
+                            <p class="text-center mt-2" style="font-size: 0.875rem; color: #6c757d;">
+                                By clicking "Get My Free Quotes", you agree to our Terms of Service and Privacy Policy
+                            </p>
+                        </div>
+                        
+                        <!-- Navigation Buttons -->
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-outline d-none" id="prevBtn">Previous</button>
+                            <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2>Why Choose NewCountertops?</h2>
+            <p>We make finding the perfect countertops simple and stress-free</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-4">
+                <div class="feature-card text-center">
+                    <div class="feature-icon">🎨</div>
+                    <h4>AI-Powered Recommendations</h4>
+                    <p>Our smart technology suggests countertops that match your style, budget, and space requirements.</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="feature-card text-center">
+                    <div class="feature-icon">🏠</div>
+                    <h4>Verified Contractors</h4>
+                    <p>Connect with pre-screened, licensed fabricators and contractors in your local area.</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="feature-card text-center">
+                    <div class="feature-icon">💰</div>
+                    <h4>Best Price Guarantee</h4>
+                    <p>Compare quotes from multiple professionals to ensure you get the best value for your investment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Popular Countertops -->
+<section class="popular-countertops py-5">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2>Popular Countertop Materials</h2>
+            <p>Explore our most sought-after countertop options</p>
+        </div>
+        
+        <div class="gallery-grid" id="popularCountertops">
+            <!-- Dynamic content loaded via JavaScript -->
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="/countertops" class="btn btn-primary btn-lg">View All Countertops</a>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section class="how-it-works py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2>How It Works</h2>
+            <p>Get your dream countertops in 4 simple steps</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-3">
+                <div class="step text-center">
+                    <div class="step-number">1</div>
+                    <h4>Tell Us Your Needs</h4>
+                    <p>Share your project details, preferences, and budget through our simple form.</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="step text-center">
+                    <div class="step-number">2</div>
+                    <h4>Get AI Recommendations</h4>
+                    <p>Our smart system suggests the best countertop options for your specific requirements.</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="step text-center">
+                    <div class="step-number">3</div>
+                    <h4>Connect with Pros</h4>
+                    <p>We match you with qualified fabricators and contractors in your area.</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="step text-center">
+                    <div class="step-number">4</div>
+                    <h4>Transform Your Space</h4>
+                    <p>Work with your chosen professional to install your beautiful new countertops.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Lead Generation Form -->
+<section class="cta-section py-5">
+    <div class="container">
+        <div class="row align-center">
+            <div class="col-6">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Get personalized countertop recommendations and connect with local professionals. It's completely free!</p>
+                
+                <ul class="benefits-list">
+                    <li>✓ Free consultation and quotes</li>
+                    <li>✓ AI-powered material recommendations</li>
+                    <li>✓ Verified local contractors</li>
+                    <li>✓ No obligation to purchase</li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <div class="lead-form-card">
+                    <h3>Get Started Today</h3>
+                    <form id="leadForm" class="lead-form">
+                        <div class="form-group">
+                            <input type="text" name="firstName" class="form-control" placeholder="First Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="lastName" class="form-control" placeholder="Last Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" class="form-control" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="zipCode" class="form-control" placeholder="ZIP Code" required>
+                        </div>
+                        <div class="form-group">
+                            <select name="projectType" class="form-control form-select" required>
+                                <option value="">Project Type</option>
+                                <option value="kitchen-remodel">Kitchen Remodel</option>
+                                <option value="bathroom-remodel">Bathroom Remodel</option>
+                                <option value="new-construction">New Construction</option>
+                                <option value="commercial">Commercial</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select name="timeline" class="form-control form-select" required>
+                                <option value="">Timeline</option>
+                                <option value="asap">ASAP</option>
+                                <option value="1-month">Within 1 Month</option>
+                                <option value="2-3-months">2-3 Months</option>
+                                <option value="3-6-months">3-6 Months</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-secondary btn-lg w-100">Get Free Quotes</button>
+                        
+                        <p class="form-disclaimer">
+                            By submitting this form, you agree to receive quotes from verified contractors. No spam, guaranteed.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Blog Posts -->
+<section class="latest-blog py-5">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2>Latest from Our Blog</h2>
+            <p>Expert tips, design inspiration, and industry insights</p>
+        </div>
+        
+        <div class="row" id="latestBlogPosts">
+            <!-- Dynamic content loaded via JavaScript -->
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="/blog" class="btn btn-outline">Read More Articles</a>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2>What Our Customers Say</h2>
+        </div>
+        
+        <div class="row">
+            <div class="col-4">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"NewCountertops made finding the perfect granite so easy! The AI recommendations were spot-on, and we found an amazing contractor."</p>
+                    <div class="testimonial-author">
+                        <strong>Sarah Johnson</strong>
+                        <span>Kitchen Remodel, Austin TX</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"As a contractor, this platform has been a game-changer for my business. High-quality leads and great customer support."</p>
+                    <div class="testimonial-author">
+                        <strong>Mike Rodriguez</strong>
+                        <span>Rodriguez Stone Works</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"The variety of quartz options was incredible. We got three quotes within 24 hours and saved thousands!"</p>
+                    <div class="testimonial-author">
+                        <strong>David & Lisa Chen</strong>
+                        <span>Bathroom Renovation, Seattle WA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', async function() {
+    // Load popular countertops
+    try {
+        const countertopsData = await api.getCountertops({ limit: 6, sortBy: 'views' });
+        displayPopularCountertops(countertopsData.countertops);
+    } catch (error) {
+        console.error('Error loading popular countertops:', error);
+    }
+
+    // Load latest blog posts
+    try {
+        const blogData = await api.getBlogPosts({ limit: 3 });
+        displayLatestBlogPosts(blogData.posts);
+    } catch (error) {
+        console.error('Error loading blog posts:', error);
+    }
+
+    // Initialize forms
+    new AppUtils.FormHandler('#quickQuoteForm', handleQuickQuote);
+    new AppUtils.FormHandler('#leadForm', handleLeadSubmission);
+});
+
+// Multi-step Lead Form Handler
+class LeadFormHandler {
+    constructor() {
+        this.currentStep = 1;
+        this.totalSteps = 3;
+        this.formData = {};
+        this.init();
+    }
+    
+    init() {
+        this.bindEvents();
+        this.updateUI();
+    }
+    
+    bindEvents() {
+        // Project type selection
+        document.querySelectorAll('.project-type').forEach(type => {
+            type.addEventListener('click', (e) => {
+                document.querySelectorAll('.project-type').forEach(t => t.classList.remove('selected'));
+                e.currentTarget.classList.add('selected');
+                this.formData.projectType = e.currentTarget.dataset.value;
+            });
+        });
+        
+        // Navigation buttons
+        document.getElementById('nextBtn').addEventListener('click', () => this.nextStep());
+        document.getElementById('prevBtn').addEventListener('click', () => this.prevStep());
+        
+        // Form submission
+        document.getElementById('leadForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            this.submitForm();
+        });
+    }
+    
+    nextStep() {
+        if (this.validateCurrentStep()) {
+            this.currentStep++;
+            this.updateUI();
+        }
+    }
+    
+    prevStep() {
+        this.currentStep--;
+        this.updateUI();
+    }
+    
+    validateCurrentStep() {
+        switch(this.currentStep) {
+            case 1:
+                if (!this.formData.projectType) {
+                    alert('Please select a project type');
+                    return false;
+                }
+                break;
+            case 2:
+                const material = document.querySelector('[name="material"]').value;
+                if (!material) {
+                    alert('Please select a material');
+                    return false;
+                }
+                this.formData.material = material;
+                this.formData.squareFootage = document.querySelector('[name="squareFootage"]').value;
+                break;
+            case 3:
+                // Validate contact form
+                const requiredFields = ['name', 'email', 'phone', 'zipCode'];
+                for (let field of requiredFields) {
+                    const value = document.querySelector(`[name="${field}"]`).value;
+                    if (!value) {
+                        alert(`Please fill in your ${field}`);
+                        return false;
+                    }
+                    this.formData[field] = value;
+                }
+                break;
+        }
+        return true;
+    }
+    
+    updateUI() {
+        // Hide all steps
+        document.querySelectorAll('.form-step').forEach(step => {
+            step.classList.remove('active');
+        });
+        
+        // Show current step
+        document.getElementById(`step${this.currentStep}`).classList.add('active');
+        
+        // Update step indicators
+        document.querySelectorAll('.step-dot').forEach((dot, index) => {
+            dot.classList.remove('active', 'completed');
+            if (index + 1 < this.currentStep) {
+                dot.classList.add('completed');
+            } else if (index + 1 === this.currentStep) {
+                dot.classList.add('active');
+            }
+        });
+        
+        // Update navigation buttons
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        
+        if (this.currentStep === 1) {
+            prevBtn.classList.add('d-none');
+        } else {
+            prevBtn.classList.remove('d-none');
+        }
+        
+        if (this.currentStep === this.totalSteps) {
+            nextBtn.classList.add('d-none');
+        } else {
+            nextBtn.classList.remove('d-none');
+        }
+    }
+    
+    async submitForm() {
+        try {
+            const response = await fetch('/api/leads', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(this.formData)
+            });
+            
+            if (response.ok) {
+                window.location.href = '/thank-you';
+            } else {
+                alert('Something went wrong. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            alert('Something went wrong. Please try again.');
+        }
+    }
+}
+
+// Initialize the lead form when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize multi-step lead form
+    new LeadFormHandler();
+});
+
+function displayPopularCountertops(countertops) {
+    const container = document.getElementById('popularCountertops');
+    if (!container || !countertops?.length) return;
+
+    container.innerHTML = countertops.map(countertop => `
+        <div class="card">
+            <img src="${countertop.images?.[0] || '/images/placeholder-countertop.jpg'}" 
+                 alt="${countertop.name}" 
+                 class="card-img"
+                 loading="lazy">
+            <div class="card-body">
+                <h4 class="card-title">${countertop.name}</h4>
+                <p class="card-text">${countertop.material} • ${countertop.colors?.[0] || 'Multiple colors'}</p>
+                <div class="card-meta">
+                    <span class="price">From $${countertop.pricing?.pricePerSqFt || 'N/A'}/sq ft</span>
+                    <div class="rating">
+                        ${'⭐'.repeat(Math.floor(countertop.rating?.average || 0))}
+                        <span>(${countertop.rating?.count || 0})</span>
+                    </div>
+                </div>
+                <a href="/countertops/${countertop._id}" class="btn btn-primary">View Details</a>
+            </div>
+        </div>
+    `).join('');
+}
+
+function displayLatestBlogPosts(posts) {
+    const container = document.getElementById('latestBlogPosts');
+    if (!container || !posts?.length) return;
+
+    container.innerHTML = posts.map(post => `
+        <div class="col-4">
+            <article class="blog-card">
+                <img src="${post.featuredImage?.url || '/images/placeholder-blog.jpg'}" 
+                     alt="${post.title}" 
+                     class="blog-card-img"
+                     loading="lazy">
+                <div class="blog-card-body">
+                    <div class="blog-meta">
+                        <span class="category">${post.category}</span>
+                        <span class="date">${new Date(post.publishedAt).toLocaleDateString()}</span>
+                    </div>
+                    <h3><a href="/blog/${post.slug}">${post.title}</a></h3>
+                    <p>${post.excerpt}</p>
+                    <a href="/blog/${post.slug}" class="read-more">Read More →</a>
+                </div>
+            </article>
+        </div>
+    `).join('');
+}
+
+async function handleQuickQuote(data) {
+    try {
+        // Redirect to full quote form with pre-filled data
+        const params = new URLSearchParams(data);
+        window.location.href = `/get-quote?${params.toString()}`;
+    } catch (error) {
+        notifications.error('Error processing quick quote. Please try again.');
+    }
+}
+
+async function handleLeadSubmission(data) {
+    try {
+        // Add additional data
+        data.source = 'website';
+        data.projectSize = 'medium'; // Default value
+        data.estimatedBudget = '10k-20k'; // Default value
+        data.address = {
+            zipCode: data.zipCode,
+            city: '',
+            state: ''
+        };
+
+        const result = await api.submitLead(data);
+        
+        notifications.success('Thank you! We\'ll connect you with qualified contractors shortly.');
+        
+        // Reset form
+        document.getElementById('leadForm').reset();
+        
+        // Optional: redirect to thank you page
+        setTimeout(() => {
+            window.location.href = '/thank-you';
+        }, 2000);
+        
+    } catch (error) {
+        notifications.error(error.message || 'Error submitting your request. Please try again.');
+    }
+}
+</script>

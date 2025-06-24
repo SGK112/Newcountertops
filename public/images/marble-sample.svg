@@ -1,0 +1,16 @@
+<!-- Marble Sample Image -->
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="marbleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#e9ecef;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f1f3f4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#marbleGrad)"/>
+  <path d="M0,50 Q100,30 200,60 T400,40" stroke="#adb5bd" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M0,120 Q150,100 300,130 T400,110" stroke="#6c757d" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M0,200 Q80,180 160,210 T400,190" stroke="#495057" stroke-width="1" fill="none" opacity="0.4"/>
+  <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="24" fill="#495057" text-anchor="middle" dy=".3em" font-weight="bold">Marble</text>
+</svg>

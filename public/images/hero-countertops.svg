@@ -1,0 +1,48 @@
+<!-- Hero Countertop Installation Image -->
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e9ecef;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="counterGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#495057;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#6c757d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#495057;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#heroGrad)"/>
+  
+  <!-- Kitchen cabinet base -->
+  <rect x="50" y="300" width="500" height="100" fill="#8b4513" rx="5"/>
+  <rect x="60" y="280" width="120" height="80" fill="#a0522d" rx="3"/>
+  <rect x="200" y="280" width="120" height="80" fill="#a0522d" rx="3"/>
+  <rect x="340" y="280" width="120" height="80" fill="#a0522d" rx="3"/>
+  <rect x="480" y="280" width="60" height="80" fill="#a0522d" rx="3"/>
+  
+  <!-- Countertop -->
+  <ellipse cx="300" cy="280" rx="260" ry="30" fill="url(#counterGrad)"/>
+  
+  <!-- Kitchen island -->
+  <rect x="200" y="200" width="200" height="80" fill="#654321" rx="5"/>
+  <ellipse cx="300" cy="200" rx="110" ry="20" fill="#495057"/>
+  
+  <!-- Tools and materials -->
+  <rect x="400" y="150" width="8" height="40" fill="#8b4513" rx="2"/>
+  <circle cx="404" cy="140" r="8" fill="#dc3545"/>
+  
+  <!-- Tile samples -->
+  <rect x="100" y="100" width="30" height="30" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  <rect x="140" y="100" width="30" height="30" fill="#495057" stroke="#dee2e6" stroke-width="1"/>
+  <rect x="180" y="100" width="30" height="30" fill="#6c757d" stroke="#dee2e6" stroke-width="1"/>
+  
+  <!-- Installation professional silhouette -->
+  <circle cx="450" cy="180" r="20" fill="#343a40"/>
+  <rect x="440" y="200" width="20" height="60" fill="#343a40" rx="5"/>
+  <rect x="435" y="220" width="10" height="30" fill="#343a40" rx="3"/>
+  <rect x="455" y="220" width="10" height="30" fill="#343a40" rx="3"/>
+  
+  <text x="300" y="50" font-family="Arial, sans-serif" font-size="20" fill="#495057" text-anchor="middle" font-weight="bold">Professional Countertop Installation</text>
+</svg>

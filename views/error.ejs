@@ -1,0 +1,53 @@
+<!-- Error Page -->
+<div class="error-page py-5">
+    <div class="container">
+        <div class="text-center">
+            <div class="error-code">500</div>
+            <h1>Server Error</h1>
+            <p class="lead">Something went wrong on our end. We're working to fix it.</p>
+            
+            <div class="error-actions mt-4">
+                <a href="/" class="btn btn-primary">Go Home</a>
+                <button onclick="window.location.reload()" class="btn btn-outline">Try Again</button>
+            </div>
+            
+            <% if (error && process.env.NODE_ENV === 'development') { %>
+            <div class="error-details mt-5">
+                <h4>Error Details (Development Mode)</h4>
+                <pre class="error-stack"><%= error.stack %></pre>
+            </div>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<style>
+.error-code {
+    font-size: 8rem;
+    font-weight: bold;
+    color: var(--error);
+    opacity: 0.3;
+    margin-bottom: var(--spacing-md);
+}
+
+.error-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.error-details {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.error-stack {
+    background: var(--light-gray);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    overflow-x: auto;
+}
+</style>

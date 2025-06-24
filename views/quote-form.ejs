@@ -1,0 +1,246 @@
+<!-- Lead Generation Form Page -->
+<div class="quote-form-page py-5">
+    <div class="container">
+        <div class="row justify-center">
+            <div class="col-8">
+                <div class="quote-form-header text-center mb-5">
+                    <h1>Get Free Countertop Quotes</h1>
+                    <p>Tell us about your project and we'll connect you with verified local contractors</p>
+                </div>
+
+                <div class="quote-form-card">
+                    <form id="quoteForm" class="quote-form">
+                        <!-- Personal Information -->
+                        <div class="form-section">
+                            <h3>Contact Information</h3>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">First Name *</label>
+                                        <input type="text" name="firstName" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Last Name *</label>
+                                        <input type="text" name="lastName" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Email Address *</label>
+                                        <input type="email" name="email" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Phone Number *</label>
+                                        <input type="tel" name="phone" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Location -->
+                        <div class="form-section">
+                            <h3>Project Location</h3>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Street Address</label>
+                                        <input type="text" name="street" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">ZIP Code *</label>
+                                        <input type="text" name="zipCode" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">City *</label>
+                                        <input type="text" name="city" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">State *</label>
+                                        <select name="state" class="form-control form-select" required>
+                                            <option value="">Select State</option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="AK">Alaska</option>
+                                            <option value="AZ">Arizona</option>
+                                            <option value="AR">Arkansas</option>
+                                            <option value="CA">California</option>
+                                            <option value="CO">Colorado</option>
+                                            <option value="CT">Connecticut</option>
+                                            <!-- Add more states as needed -->
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Details -->
+                        <div class="form-section">
+                            <h3>Project Details</h3>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Project Type *</label>
+                                        <select name="projectType" class="form-control form-select" required>
+                                            <option value="">Select Project Type</option>
+                                            <option value="kitchen-remodel">Kitchen Remodel</option>
+                                            <option value="bathroom-remodel">Bathroom Remodel</option>
+                                            <option value="new-construction">New Construction</option>
+                                            <option value="commercial">Commercial</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Project Size *</label>
+                                        <select name="projectSize" class="form-control form-select" required>
+                                            <option value="">Select Project Size</option>
+                                            <option value="small">Small (under 50 sq ft)</option>
+                                            <option value="medium">Medium (50-100 sq ft)</option>
+                                            <option value="large">Large (100-150 sq ft)</option>
+                                            <option value="very-large">Very Large (150+ sq ft)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Estimated Budget *</label>
+                                        <select name="estimatedBudget" class="form-control form-select" required>
+                                            <option value="">Select Budget Range</option>
+                                            <option value="under-5k">Under $5,000</option>
+                                            <option value="5k-10k">$5,000 - $10,000</option>
+                                            <option value="10k-20k">$10,000 - $20,000</option>
+                                            <option value="20k-50k">$20,000 - $50,000</option>
+                                            <option value="over-50k">Over $50,000</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Timeline *</label>
+                                        <select name="timeline" class="form-control form-select" required>
+                                            <option value="">Select Timeline</option>
+                                            <option value="asap">ASAP</option>
+                                            <option value="1-month">Within 1 Month</option>
+                                            <option value="2-3-months">2-3 Months</option>
+                                            <option value="3-6-months">3-6 Months</option>
+                                            <option value="flexible">Flexible</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Material Preferences -->
+                        <div class="form-section">
+                            <h3>Material Preferences</h3>
+                            <div class="form-group">
+                                <label class="form-label">Preferred Materials (select all that apply)</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="countertopMaterials" value="granite">
+                                        <span>Granite</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="countertopMaterials" value="quartz">
+                                        <span>Quartz</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="countertopMaterials" value="marble">
+                                        <span>Marble</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="countertopMaterials" value="quartzite">
+                                        <span>Quartzite</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="countertopMaterials" value="concrete">
+                                        <span>Concrete</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="countertopMaterials" value="other">
+                                        <span>Other</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Additional Details</label>
+                                <textarea name="additionalNotes" class="form-control" rows="4" 
+                                    placeholder="Tell us more about your project, color preferences, special requirements, etc."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-secondary btn-lg">Get Free Quotes</button>
+                        </div>
+
+                        <div class="form-disclaimer">
+                            <p>By submitting this form, you agree to be contacted by verified contractors in your area. 
+                            We respect your privacy and will never share your information with third parties.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Pre-fill form if query parameters exist
+    const urlParams = new URLSearchParams(window.location.search);
+    const form = document.getElementById('quoteForm');
+    
+    for (const [key, value] of urlParams.entries()) {
+        const input = form.querySelector(`[name="${key}"]`);
+        if (input) {
+            input.value = value;
+        }
+    }
+
+    // Initialize form handler
+    new AppUtils.FormHandler('#quoteForm', async (data) => {
+        try {
+            // Transform address data
+            data.address = {
+                street: data.street || '',
+                city: data.city,
+                state: data.state,
+                zipCode: data.zipCode
+            };
+            
+            // Clean up form data
+            delete data.street;
+            delete data.city;
+            delete data.state;
+            delete data.zipCode;
+            
+            // Add default values
+            data.source = 'website';
+            
+            const result = await api.submitLead(data);
+            
+            // Redirect to thank you page
+            window.location.href = '/thank-you?leadId=' + result.leadId;
+            
+        } catch (error) {
+            notifications.error(error.message || 'Error submitting your request. Please try again.');
+        }
+    });
+});
+</script>

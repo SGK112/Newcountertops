@@ -1,0 +1,51 @@
+<!-- 404 Page -->
+<div class="error-page py-5">
+    <div class="container">
+        <div class="text-center">
+            <div class="error-code">404</div>
+            <h1>Page Not Found</h1>
+            <p class="lead">Sorry, the page you're looking for doesn't exist.</p>
+            
+            <div class="error-actions mt-4">
+                <a href="/" class="btn btn-primary">Go Home</a>
+                <a href="/countertops" class="btn btn-outline">Browse Countertops</a>
+            </div>
+            
+            <div class="search-section mt-5">
+                <h3>Looking for something specific?</h3>
+                <form class="search-form-inline">
+                    <input type="text" name="query" class="form-control" placeholder="Search for countertops, materials, or tips...">
+                    <button type="submit" class="btn btn-secondary">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.error-code {
+    font-size: 8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    opacity: 0.3;
+    margin-bottom: var(--spacing-md);
+}
+
+.error-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.search-form-inline {
+    display: flex;
+    gap: var(--spacing-sm);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.search-form-inline .form-control {
+    flex: 1;
+}
+</style>

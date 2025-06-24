@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%- title %> | NewCountertops.com</title>
+    <meta name="description" content="<%- description || 'Discover the perfect countertops for your kitchen and bathroom. Connect with top fabricators and contractors.' %>">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="<%- title %> | NewCountertops.com">
+    <meta property="og:description" content="<%- description || 'Discover the perfect countertops for your kitchen and bathroom.' %>">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<%- typeof url !== 'undefined' ? url : '' %>">
+    <meta property="og:image" content="<%- typeof image !== 'undefined' ? image : '/images/og-image.jpg' %>">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<%- title %> | NewCountertops.com">
+    <meta name="twitter:description" content="<%- description || 'Discover the perfect countertops for your kitchen and bathroom.' %>">
+    <meta name="twitter:image" content="<%- typeof image !== 'undefined' ? image : '/images/og-image.jpg' %>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/main.css">
+    <% if (typeof additionalCSS !== 'undefined') { %>
+        <% additionalCSS.forEach(function(css) { %>
+            <link rel="stylesheet" href="<%- css %>">
+        <% }); %>
+    <% } %>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "NewCountertops.com",
+        "url": "https://newcountertops.com",
+        "logo": "https://newcountertops.com/images/logo.png",
+        "description": "Leading platform for discovering countertops and connecting with fabricators",
+        "sameAs": [
+            "https://facebook.com/newcountertops",
+            "https://instagram.com/newcountertops",
+            "https://linkedin.com/company/newcountertops"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="/" class="navbar-brand">NewCountertops</a>
+                
+                <ul class="navbar-nav">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/countertops" class="nav-link">Countertops</a></li>
+                    <li><a href="/blog" class="nav-link">Blog</a></li>
+                    <li><a href="/contractors" class="nav-link">Find Contractors</a></li>
+                    <li><a href="/get-quote" class="nav-link">Get Quote</a></li>
+                </ul>
+                
+                <div class="navbar-actions">
+                    <button class="btn btn-outline" onclick="openSearchModal()">Search</button>
+                    <a href="/login" class="btn btn-primary">Login</a>
+                </div>
+                
+                <button class="mobile-menu-btn d-none">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <%- body %>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <h5>NewCountertops</h5>
+                    <p>Your premier destination for discovering beautiful countertops and connecting with expert fabricators.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                    </div>
+                </div>
+                
+                <div class="col-2">
+                    <h6>Explore</h6>
+                    <ul class="footer-links">
+                        <li><a href="/countertops">All Countertops</a></li>
+                        <li><a href="/countertops?material=granite">Granite</a></li>
+                        <li><a href="/countertops?material=quartz">Quartz</a></li>
+                        <li><a href="/countertops?material=marble">Marble</a></li>
+                        <li><a href="/countertops?material=quartzite">Quartzite</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-2">
+                    <h6>Resources</h6>
+                    <ul class="footer-links">
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/blog?category=buyer-guides">Buyer's Guides</a></li>
+                        <li><a href="/blog?category=design-ideas">Design Ideas</a></li>
+                        <li><a href="/blog?category=maintenance">Care Tips</a></li>
+                        <li><a href="/calculators">Cost Calculator</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-2">
+                    <h6>For Professionals</h6>
+                    <ul class="footer-links">
+                        <li><a href="/fabricators/signup">Join as Fabricator</a></li>
+                        <li><a href="/contractors/signup">Join as Contractor</a></li>
+                        <li><a href="/leads">Buy Leads</a></li>
+                        <li><a href="/partner-program">Partner Program</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-2">
+                    <h6>Support</h6>
+                    <ul class="footer-links">
+                        <li><a href="/contact">Contact Us</a></li>
+                        <li><a href="/help">Help Center</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 NewCountertops.com. All rights reserved.</p>
+                <p>Made with ❤️ for beautiful kitchens</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Search Modal -->
+    <div class="modal d-none" id="searchModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Search NewCountertops</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form class="search-form">
+                    <div class="form-group">
+                        <input type="text" name="query" class="form-control" placeholder="Search for countertops, materials, or design ideas..." required>
+                    </div>
+                    <div class="form-group">
+                        <select name="type" class="form-control form-select">
+                            <option value="all">All Results</option>
+                            <option value="countertops">Countertops Only</option>
+                            <option value="blog">Blog Posts Only</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg">Search</button>
+                </form>
+                
+                <div class="search-results mt-4"></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay d-none"></div>
+
+    <!-- Notification Container -->
+    <div class="notification-container"></div>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+    <% if (typeof additionalJS !== 'undefined') { %>
+        <% additionalJS.forEach(function(js) { %>
+            <script src="<%- js %>"></script>
+        <% }); %>
+    <% } %>
+    
+    <!-- Search Modal Script -->
+    <script>
+        function openSearchModal() {
+            const modal = new AppUtils.Modal('#searchModal');
+            modal.open();
+        }
+    </script>
+
+    <!-- Analytics -->
+    <% if (process.env.NODE_ENV === 'production') { %>
+    <!-- Add Google Analytics or other tracking here -->
+    <% } %>
+</body>
+</html>

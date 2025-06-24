@@ -1,0 +1,115 @@
+<!-- Thank You Page -->
+<div class="thank-you-page py-5">
+    <div class="container">
+        <div class="text-center">
+            <div class="success-icon mb-4">
+                <div class="checkmark">✓</div>
+            </div>
+            
+            <h1>Thank You!</h1>
+            <p class="lead">We've received your request and will connect you with qualified contractors soon.</p>
+            
+            <div class="what-happens-next mt-5">
+                <h3>What Happens Next?</h3>
+                <div class="row mt-4">
+                    <div class="col-4">
+                        <div class="step">
+                            <div class="step-icon">📧</div>
+                            <h4>Email Confirmation</h4>
+                            <p>You'll receive a confirmation email with your request details within minutes.</p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="step">
+                            <div class="step-icon">🔍</div>
+                            <h4>Contractor Matching</h4>
+                            <p>We'll match you with up to 3 qualified contractors in your area within 24 hours.</p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="step">
+                            <div class="step-icon">📞</div>
+                            <h4>Direct Contact</h4>
+                            <p>Contractors will contact you directly to schedule consultations and provide quotes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-section mt-5">
+                <h3>While You Wait...</h3>
+                <p>Explore our resources to prepare for your countertop project</p>
+                
+                <div class="action-buttons mt-4">
+                    <a href="/blog?category=buyer-guides" class="btn btn-primary">Read Buyer's Guides</a>
+                    <a href="/countertops" class="btn btn-outline">Browse Countertops</a>
+                    <a href="/blog?category=design-ideas" class="btn btn-outline">Get Design Ideas</a>
+                </div>
+            </div>
+            
+            <div class="contact-info mt-5">
+                <h4>Questions?</h4>
+                <p>Contact our support team at <a href="mailto:support@newcountertops.com">support@newcountertops.com</a> or call <a href="tel:+1-555-123-4567">(555) 123-4567</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.success-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkmark {
+    width: 80px;
+    height: 80px;
+    background: var(--success);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    animation: bounce 0.6s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.step-icon {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.what-happens-next .step {
+    padding: var(--spacing-lg);
+    text-align: center;
+}
+
+.action-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    padding: var(--spacing-lg);
+    background: var(--light-gray);
+    border-radius: var(--radius-lg);
+    margin: var(--spacing-xl) auto 0;
+    max-width: 600px;
+}
+</style>
